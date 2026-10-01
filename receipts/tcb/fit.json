@@ -1,0 +1,97 @@
+{
+ "label": "engine-ladder Elo (Stockfish 19 UCI_Elo 1320-anchored, time control A: Stockfish 19, 1 thread, 100k nodes/move for UCI_Elo/Skill rungs; fixed depth for depth rungs), 95% CI. Not a human rating. Values below 1320 are extrapolated through the ladder chain.",
+ "anchor": "sf-elo1320",
+ "anchor_elo": 1320.0,
+ "games": 400,
+ "terminations": {
+  "checkmate": 364,
+  "stalemate": 4,
+  "threefold_repetition": 31,
+  "insufficient_material": 1
+ },
+ "resamples": 1000,
+ "bootstrap_seed": 0,
+ "ratings": {
+  "sf-elo1320": {
+   "elo": 1320.0,
+   "ci95": [
+    1320.0,
+    1320.0
+   ]
+  },
+  "sf-elo1320-1m": {
+   "elo": 1342.5,
+   "ci95": [
+    1294.0,
+    1388.3
+   ]
+  },
+  "sf-d1": {
+   "elo": 1619.0,
+   "ci95": [
+    1545.2,
+    1695.5
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "pair": "sf-elo1320-1m~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    104,
+    5,
+    91
+   ],
+   "score": 0.5325,
+   "score_ci95": [
+    0.4634,
+    0.6004
+   ],
+   "predicted": 0.5323,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1320-1m~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    18,
+    31,
+    151
+   ],
+   "score": 0.1675,
+   "score_ci95": [
+    0.1221,
+    0.2254
+   ],
+   "predicted": 0.1692,
+   "miss_pts": 0.0,
+   "saturated": false
+  }
+ ],
+ "adjacent": [
+  {
+   "link": "sf-elo1320-1m over sf-elo1320",
+   "games": 200,
+   "score_upper": 0.5325,
+   "in_band_20_80": true
+  },
+  {
+   "link": "sf-d1 over sf-elo1320-1m",
+   "games": 200,
+   "score_upper": 0.8325,
+   "in_band_20_80": false
+  }
+ ],
+ "routes": [],
+ "checks": {
+  "adjacent_links_in_band": 1,
+  "adjacent_links_total": 2,
+  "max_abs_cycle_residual_elo": null,
+  "route_trigger_150_fired": false,
+  "max_prediction_miss_pts": 0.0,
+  "miss_trigger_10_fired": false,
+  "unsaturated_triangles": 0
+ }
+}

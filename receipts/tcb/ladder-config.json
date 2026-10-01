@@ -1,0 +1,43 @@
+{
+ "run_id": "tcb-v1",
+ "games": 200,
+ "players": {
+  "sf-elo1320-1m": "sf:elo=1320,nodes=1000000",
+  "sf-elo1320": "sf:elo=1320,nodes=100000",
+  "sf-d1": "sf:depth=1"
+ },
+ "pairs": [
+  [
+   "sf-elo1320-1m",
+   "sf-d1"
+  ],
+  [
+   "sf-elo1320-1m",
+   "sf-elo1320"
+  ]
+ ],
+ "workers": 14,
+ "label": "TC-B-1320-link-1M-nodes",
+ "process_per_game": true,
+ "seed_formula": "derive_seed(run_id, pairing_id, game_index); chesslab/seeds.py",
+ "commit": {
+  "commit": "3f84f3ed50f2529a6f0bc74db4d446f5c0a0e1c2",
+  "dirty": false
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ },
+ "started": "2026-09-19T04:50:14-0500",
+ "wall_s": 2342.3,
+ "games_total": 400,
+ "shared_process_games": 0
+}

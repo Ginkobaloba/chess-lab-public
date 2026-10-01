@@ -1,0 +1,22 @@
+// Provenance: copied from Ginkobaloba/draughts-lab web/tsconfig.json at commit
+// 0a5c5a0fe6cc3443565937a738509f5de9479b19 (Paradigm-owned, MIT). Changes: the
+// engine-ts path alias is removed.
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["src", "test", "vitest.config.ts"]
+}

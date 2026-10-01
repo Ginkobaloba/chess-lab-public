@@ -1,0 +1,64 @@
+{
+ "data": "D:\\chess-lab-data\\positions\\2026-08-p4g-1800-2199",
+ "run": "D:\\chess-lab-data\\runs\\sup-v1",
+ "steps": 80000,
+ "batch": 2048,
+ "lr": 0.002,
+ "wd": 0.0001,
+ "warmup": 1000,
+ "value_weight": 0.25,
+ "blocks": 8,
+ "channels": 96,
+ "val_cap": 500000,
+ "ckpt_steps": [
+  250,
+  500,
+  1000,
+  2000,
+  4000,
+  8000,
+  16000,
+  32000,
+  48000,
+  64000
+ ],
+ "seed": 0,
+ "log_every": 200,
+ "ckpts": [
+  0,
+  250,
+  500,
+  1000,
+  2000,
+  4000,
+  8000,
+  16000,
+  32000,
+  48000,
+  64000,
+  80000
+ ],
+ "params": 1502963,
+ "train_positions": 105607106,
+ "commit": {
+  "commit": "3b8c6551c7aa4081af487728d4825dea5b557187",
+  "dirty": false
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ },
+ "torch": "2.11.0+cu128",
+ "started": "2026-09-19T03:20:52-0500",
+ "data_manifest": "c37f31319cbf4a1b2b61a705ff7396d49386815f1f050bcf0acd0d4b595d7141",
+ "wall_s": 1974.6,
+ "finished": "2026-09-19T03:53:46-0500"
+}

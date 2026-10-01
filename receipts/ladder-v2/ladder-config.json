@@ -1,0 +1,222 @@
+{
+ "run_id": "ladder-v2",
+ "games": 200,
+ "players": {
+  "random": "random",
+  "m1r50": "mix:50:random|material1",
+  "material1": "material1",
+  "material2": "material2",
+  "sf1320m1": "mix:50:material1|sf:elo=1320,nodes=100000",
+  "sf-elo1320": "sf:elo=1320,nodes=100000",
+  "sf-elo1500": "sf:elo=1500,nodes=100000",
+  "sf-elo1700": "sf:elo=1700,nodes=100000",
+  "sf-d1": "sf:depth=1",
+  "sf-d3": "sf:depth=3"
+ },
+ "pairs": [
+  [
+   "m1r50",
+   "material1"
+  ],
+  [
+   "m1r50",
+   "material2"
+  ],
+  [
+   "m1r50",
+   "sf-d1"
+  ],
+  [
+   "m1r50",
+   "sf-d3"
+  ],
+  [
+   "m1r50",
+   "sf-elo1320"
+  ],
+  [
+   "m1r50",
+   "sf-elo1500"
+  ],
+  [
+   "m1r50",
+   "sf-elo1700"
+  ],
+  [
+   "m1r50",
+   "sf1320m1"
+  ],
+  [
+   "material1",
+   "material2"
+  ],
+  [
+   "material1",
+   "sf-d1"
+  ],
+  [
+   "material1",
+   "sf-d3"
+  ],
+  [
+   "material1",
+   "sf-elo1320"
+  ],
+  [
+   "material1",
+   "sf-elo1500"
+  ],
+  [
+   "material1",
+   "sf-elo1700"
+  ],
+  [
+   "material1",
+   "sf1320m1"
+  ],
+  [
+   "material2",
+   "sf-d1"
+  ],
+  [
+   "material2",
+   "sf-d3"
+  ],
+  [
+   "material2",
+   "sf-elo1320"
+  ],
+  [
+   "material2",
+   "sf-elo1500"
+  ],
+  [
+   "material2",
+   "sf-elo1700"
+  ],
+  [
+   "material2",
+   "sf1320m1"
+  ],
+  [
+   "random",
+   "m1r50"
+  ],
+  [
+   "random",
+   "material1"
+  ],
+  [
+   "random",
+   "material2"
+  ],
+  [
+   "random",
+   "sf-d1"
+  ],
+  [
+   "random",
+   "sf-d3"
+  ],
+  [
+   "random",
+   "sf-elo1320"
+  ],
+  [
+   "random",
+   "sf-elo1500"
+  ],
+  [
+   "random",
+   "sf-elo1700"
+  ],
+  [
+   "random",
+   "sf1320m1"
+  ],
+  [
+   "sf-d1",
+   "sf-d3"
+  ],
+  [
+   "sf-elo1320",
+   "sf-d1"
+  ],
+  [
+   "sf-elo1320",
+   "sf-d3"
+  ],
+  [
+   "sf-elo1320",
+   "sf-elo1500"
+  ],
+  [
+   "sf-elo1320",
+   "sf-elo1700"
+  ],
+  [
+   "sf-elo1500",
+   "sf-d1"
+  ],
+  [
+   "sf-elo1500",
+   "sf-d3"
+  ],
+  [
+   "sf-elo1500",
+   "sf-elo1700"
+  ],
+  [
+   "sf-elo1700",
+   "sf-d1"
+  ],
+  [
+   "sf-elo1700",
+   "sf-d3"
+  ],
+  [
+   "sf1320m1",
+   "sf-d1"
+  ],
+  [
+   "sf1320m1",
+   "sf-d3"
+  ],
+  [
+   "sf1320m1",
+   "sf-elo1320"
+  ],
+  [
+   "sf1320m1",
+   "sf-elo1500"
+  ],
+  [
+   "sf1320m1",
+   "sf-elo1700"
+  ]
+ ],
+ "workers": 8,
+ "label": "gap-filled-ladder-v2-TC-A",
+ "process_per_game": true,
+ "seed_formula": "derive_seed(run_id, pairing_id, game_index); chesslab/seeds.py",
+ "commit": {
+  "commit": "3f84f3ed50f2529a6f0bc74db4d446f5c0a0e1c2",
+  "dirty": false
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ },
+ "started": "2026-09-19T04:07:40-0500",
+ "wall_s": 2230.2,
+ "games_total": 9000,
+ "shared_process_games": 0
+}

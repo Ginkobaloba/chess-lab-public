@@ -1,0 +1,1354 @@
+{
+ "label": "engine-ladder Elo (Stockfish 19 UCI_Elo 1320-anchored, time control A: Stockfish 19, 1 thread, 100k nodes/move for UCI_Elo/Skill rungs; fixed depth for depth rungs), 95% CI. Not a human rating. Values below 1320 are extrapolated through the ladder chain.",
+ "anchor": "sf-elo1320",
+ "anchor_elo": 1320.0,
+ "games": 9000,
+ "terminations": {
+  "checkmate": 8195,
+  "stalemate": 77,
+  "threefold_repetition": 561,
+  "insufficient_material": 154,
+  "cap": 1,
+  "fifty_moves": 12
+ },
+ "resamples": 1000,
+ "bootstrap_seed": 0,
+ "ratings": {
+  "random": {
+   "elo": 170.7,
+   "ci95": [
+    114.0,
+    221.0
+   ]
+  },
+  "m1r50": {
+   "elo": 495.8,
+   "ci95": [
+    450.7,
+    535.0
+   ]
+  },
+  "material1": {
+   "elo": 653.5,
+   "ci95": [
+    612.3,
+    688.9
+   ]
+  },
+  "sf1320m1": {
+   "elo": 817.5,
+   "ci95": [
+    779.8,
+    850.3
+   ]
+  },
+  "material2": {
+   "elo": 1063.7,
+   "ci95": [
+    1039.6,
+    1084.9
+   ]
+  },
+  "sf-elo1320": {
+   "elo": 1320.0,
+   "ci95": [
+    1320.0,
+    1320.0
+   ]
+  },
+  "sf-elo1500": {
+   "elo": 1465.4,
+   "ci95": [
+    1438.3,
+    1491.5
+   ]
+  },
+  "sf-d1": {
+   "elo": 1531.7,
+   "ci95": [
+    1505.2,
+    1560.7
+   ]
+  },
+  "sf-elo1700": {
+   "elo": 1611.6,
+   "ci95": [
+    1582.0,
+    1638.0
+   ]
+  },
+  "sf-d3": {
+   "elo": 1851.5,
+   "ci95": [
+    1819.2,
+    1885.4
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "pair": "random~m1r50",
+   "games": 200,
+   "w_d_l": [
+    0,
+    36,
+    164
+   ],
+   "score": 0.09,
+   "score_ci95": [
+    0.0577,
+    0.1378
+   ],
+   "predicted": 0.1334,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "random~material1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    25,
+    175
+   ],
+   "score": 0.0625,
+   "score_ci95": [
+    0.0365,
+    0.105
+   ],
+   "predicted": 0.0585,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "random~material2",
+   "games": 200,
+   "w_d_l": [
+    0,
+    5,
+    195
+   ],
+   "score": 0.0125,
+   "score_ci95": [
+    0.0039,
+    0.0395
+   ],
+   "predicted": 0.0058,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf1320m1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0236,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0013,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    0,
+    0,
+    200
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.0188
+   ],
+   "predicted": 0.0006,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0002,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    9,
+    191
+   ],
+   "score": 0.0225,
+   "score_ci95": [
+    0.0092,
+    0.0538
+   ],
+   "predicted": 0.0004,
+   "miss_pts": 0.88,
+   "saturated": false
+  },
+  {
+   "pair": "random~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0001,
+   "miss_pts": 0.02,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~material1",
+   "games": 200,
+   "w_d_l": [
+    3,
+    105,
+    92
+   ],
+   "score": 0.2775,
+   "score_ci95": [
+    0.2201,
+    0.3433
+   ],
+   "predicted": 0.2874,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "m1r50~material2",
+   "games": 200,
+   "w_d_l": [
+    0,
+    4,
+    196
+   ],
+   "score": 0.01,
+   "score_ci95": [
+    0.0027,
+    0.0357
+   ],
+   "predicted": 0.0367,
+   "miss_pts": 0.09,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~sf1320m1",
+   "games": 200,
+   "w_d_l": [
+    2,
+    27,
+    171
+   ],
+   "score": 0.0775,
+   "score_ci95": [
+    0.0479,
+    0.123
+   ],
+   "predicted": 0.1356,
+   "miss_pts": 1.26,
+   "saturated": false
+  },
+  {
+   "pair": "m1r50~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0086,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    0,
+    0,
+    200
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.0188
+   ],
+   "predicted": 0.0038,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0016,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    17,
+    183
+   ],
+   "score": 0.0425,
+   "score_ci95": [
+    0.0221,
+    0.0801
+   ],
+   "predicted": 0.0026,
+   "miss_pts": 1.96,
+   "saturated": false
+  },
+  {
+   "pair": "m1r50~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0004,
+   "miss_pts": 0.05,
+   "saturated": true
+  },
+  {
+   "pair": "material1~material2",
+   "games": 200,
+   "w_d_l": [
+    0,
+    4,
+    196
+   ],
+   "score": 0.01,
+   "score_ci95": [
+    0.0027,
+    0.0357
+   ],
+   "predicted": 0.0862,
+   "miss_pts": 5.05,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf1320m1",
+   "games": 200,
+   "w_d_l": [
+    16,
+    84,
+    100
+   ],
+   "score": 0.29,
+   "score_ci95": [
+    0.2315,
+    0.3564
+   ],
+   "predicted": 0.2801,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "material1~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    0,
+    4,
+    196
+   ],
+   "score": 0.01,
+   "score_ci95": [
+    0.0027,
+    0.0357
+   ],
+   "predicted": 0.0211,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0093,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    0,
+    0,
+    200
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.0188
+   ],
+   "predicted": 0.004,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    23,
+    177
+   ],
+   "score": 0.0575,
+   "score_ci95": [
+    0.0328,
+    0.0989
+   ],
+   "predicted": 0.0063,
+   "miss_pts": 2.65,
+   "saturated": false
+  },
+  {
+   "pair": "material1~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    8,
+    192
+   ],
+   "score": 0.02,
+   "score_ci95": [
+    0.0078,
+    0.0503
+   ],
+   "predicted": 0.001,
+   "miss_pts": 0.68,
+   "saturated": true
+  },
+  {
+   "pair": "material2~sf1320m1",
+   "games": 200,
+   "w_d_l": [
+    178,
+    15,
+    7
+   ],
+   "score": 0.9275,
+   "score_ci95": [
+    0.8829,
+    0.9559
+   ],
+   "predicted": 0.8049,
+   "miss_pts": 7.81,
+   "saturated": false
+  },
+  {
+   "pair": "material2~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    5,
+    7,
+    188
+   ],
+   "score": 0.0425,
+   "score_ci95": [
+    0.0221,
+    0.0801
+   ],
+   "predicted": 0.1861,
+   "miss_pts": 10.6,
+   "saturated": false
+  },
+  {
+   "pair": "material2~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    1,
+    3,
+    196
+   ],
+   "score": 0.0125,
+   "score_ci95": [
+    0.0039,
+    0.0395
+   ],
+   "predicted": 0.0901,
+   "miss_pts": 5.06,
+   "saturated": true
+  },
+  {
+   "pair": "material2~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    1,
+    1,
+    198
+   ],
+   "score": 0.0075,
+   "score_ci95": [
+    0.0017,
+    0.0318
+   ],
+   "predicted": 0.0409,
+   "miss_pts": 0.91,
+   "saturated": true
+  },
+  {
+   "pair": "material2~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    2,
+    36,
+    162
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0657,
+    0.1494
+   ],
+   "predicted": 0.0633,
+   "miss_pts": 0.23,
+   "saturated": false
+  },
+  {
+   "pair": "material2~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    3,
+    197
+   ],
+   "score": 0.0075,
+   "score_ci95": [
+    0.0017,
+    0.0318
+   ],
+   "predicted": 0.0106,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "sf1320m1~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    4,
+    4,
+    192
+   ],
+   "score": 0.03,
+   "score_ci95": [
+    0.0138,
+    0.0639
+   ],
+   "predicted": 0.0525,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf1320m1~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    0,
+    3,
+    197
+   ],
+   "score": 0.0075,
+   "score_ci95": [
+    0.0017,
+    0.0318
+   ],
+   "predicted": 0.0234,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "sf1320m1~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0102,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "sf1320m1~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    39,
+    161
+   ],
+   "score": 0.0975,
+   "score_ci95": [
+    0.0637,
+    0.1465
+   ],
+   "predicted": 0.0161,
+   "miss_pts": 4.75,
+   "saturated": false
+  },
+  {
+   "pair": "sf1320m1~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    5,
+    195
+   ],
+   "score": 0.0125,
+   "score_ci95": [
+    0.0039,
+    0.0395
+   ],
+   "predicted": 0.0026,
+   "miss_pts": 0.13,
+   "saturated": true
+  },
+  {
+   "pair": "sf-elo1320~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    50,
+    10,
+    140
+   ],
+   "score": 0.275,
+   "score_ci95": [
+    0.2178,
+    0.3407
+   ],
+   "predicted": 0.3021,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1320~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    16,
+    6,
+    178
+   ],
+   "score": 0.095,
+   "score_ci95": [
+    0.0617,
+    0.1436
+   ],
+   "predicted": 0.1572,
+   "miss_pts": 1.36,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1320~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    14,
+    42,
+    144
+   ],
+   "score": 0.175,
+   "score_ci95": [
+    0.1286,
+    0.2336
+   ],
+   "predicted": 0.2282,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1320~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    1,
+    3,
+    196
+   ],
+   "score": 0.0125,
+   "score_ci95": [
+    0.0039,
+    0.0395
+   ],
+   "predicted": 0.0448,
+   "miss_pts": 0.53,
+   "saturated": true
+  },
+  {
+   "pair": "sf-elo1500~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    48,
+    19,
+    133
+   ],
+   "score": 0.2875,
+   "score_ci95": [
+    0.2292,
+    0.3538
+   ],
+   "predicted": 0.3012,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1500~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    32,
+    68,
+    100
+   ],
+   "score": 0.33,
+   "score_ci95": [
+    0.2686,
+    0.3978
+   ],
+   "predicted": 0.4058,
+   "miss_pts": 0.8,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1500~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    6,
+    14,
+    180
+   ],
+   "score": 0.065,
+   "score_ci95": [
+    0.0384,
+    0.108
+   ],
+   "predicted": 0.0978,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1700~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    68,
+    75,
+    57
+   ],
+   "score": 0.5275,
+   "score_ci95": [
+    0.4584,
+    0.5955
+   ],
+   "predicted": 0.6131,
+   "miss_pts": 1.76,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1700~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    21,
+    32,
+    147
+   ],
+   "score": 0.185,
+   "score_ci95": [
+    0.1373,
+    0.2446
+   ],
+   "predicted": 0.2009,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-d1~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    5,
+    56,
+    139
+   ],
+   "score": 0.165,
+   "score_ci95": [
+    0.12,
+    0.2227
+   ],
+   "predicted": 0.1369,
+   "miss_pts": 0.0,
+   "saturated": false
+  }
+ ],
+ "adjacent": [
+  {
+   "link": "m1r50 over random",
+   "games": 200,
+   "score_upper": 0.91,
+   "in_band_20_80": false
+  },
+  {
+   "link": "material1 over m1r50",
+   "games": 200,
+   "score_upper": 0.7225,
+   "in_band_20_80": true
+  },
+  {
+   "link": "sf1320m1 over material1",
+   "games": 200,
+   "score_upper": 0.71,
+   "in_band_20_80": true
+  },
+  {
+   "link": "material2 over sf1320m1",
+   "games": 200,
+   "score_upper": 0.9275,
+   "in_band_20_80": false
+  },
+  {
+   "link": "sf-elo1320 over material2",
+   "games": 200,
+   "score_upper": 0.9575,
+   "in_band_20_80": false
+  },
+  {
+   "link": "sf-elo1500 over sf-elo1320",
+   "games": 200,
+   "score_upper": 0.725,
+   "in_band_20_80": true
+  },
+  {
+   "link": "sf-d1 over sf-elo1500",
+   "games": 200,
+   "score_upper": 0.67,
+   "in_band_20_80": true
+  },
+  {
+   "link": "sf-elo1700 over sf-d1",
+   "games": 200,
+   "score_upper": 0.5275,
+   "in_band_20_80": true
+  },
+  {
+   "link": "sf-d3 over sf-elo1700",
+   "games": 200,
+   "score_upper": 0.815,
+   "in_band_20_80": false
+  }
+ ],
+ "routes": [
+  {
+   "from": "m1r50",
+   "to": "material1",
+   "via": "random",
+   "direct": -165.3,
+   "route": -66.4,
+   "residual": 98.8
+  },
+  {
+   "from": "m1r50",
+   "to": "material1",
+   "via": "sf-d1",
+   "direct": -165.3,
+   "route": -52.7,
+   "residual": 112.6
+  },
+  {
+   "from": "m1r50",
+   "to": "material1",
+   "via": "sf1320m1",
+   "direct": -165.3,
+   "route": -270.6,
+   "residual": -105.3
+  },
+  {
+   "from": "m1r50",
+   "to": "random",
+   "via": "material1",
+   "direct": 397.6,
+   "route": 298.8,
+   "residual": -98.8
+  },
+  {
+   "from": "m1r50",
+   "to": "random",
+   "via": "sf-d1",
+   "direct": 397.6,
+   "route": 105.7,
+   "residual": -291.9
+  },
+  {
+   "from": "m1r50",
+   "to": "sf-d1",
+   "via": "material1",
+   "direct": -531.6,
+   "route": -644.2,
+   "residual": -112.6
+  },
+  {
+   "from": "m1r50",
+   "to": "sf-d1",
+   "via": "random",
+   "direct": -531.6,
+   "route": -239.7,
+   "residual": 291.9
+  },
+  {
+   "from": "m1r50",
+   "to": "sf-d1",
+   "via": "sf1320m1",
+   "direct": -531.6,
+   "route": -807.9,
+   "residual": -276.3
+  },
+  {
+   "from": "m1r50",
+   "to": "sf1320m1",
+   "via": "material1",
+   "direct": -425.2,
+   "route": -319.9,
+   "residual": 105.3
+  },
+  {
+   "from": "m1r50",
+   "to": "sf1320m1",
+   "via": "sf-d1",
+   "direct": -425.2,
+   "route": -149.0,
+   "residual": 276.3
+  },
+  {
+   "from": "material1",
+   "to": "random",
+   "via": "m1r50",
+   "direct": 464.1,
+   "route": 562.9,
+   "residual": 98.8
+  },
+  {
+   "from": "material1",
+   "to": "random",
+   "via": "sf-d1",
+   "direct": 464.1,
+   "route": 158.4,
+   "residual": -305.7
+  },
+  {
+   "from": "material1",
+   "to": "sf-d1",
+   "via": "m1r50",
+   "direct": -478.9,
+   "route": -366.4,
+   "residual": 112.6
+  },
+  {
+   "from": "material1",
+   "to": "sf-d1",
+   "via": "random",
+   "direct": -478.9,
+   "route": -173.2,
+   "residual": 305.7
+  },
+  {
+   "from": "material1",
+   "to": "sf-d1",
+   "via": "sf1320m1",
+   "direct": -478.9,
+   "route": -537.3,
+   "residual": -58.4
+  },
+  {
+   "from": "material1",
+   "to": "sf1320m1",
+   "via": "m1r50",
+   "direct": -154.7,
+   "route": -259.9,
+   "residual": -105.3
+  },
+  {
+   "from": "material1",
+   "to": "sf1320m1",
+   "via": "sf-d1",
+   "direct": -154.7,
+   "route": -96.3,
+   "residual": 58.4
+  },
+  {
+   "from": "material2",
+   "to": "sf-d1",
+   "via": "sf-elo1320",
+   "direct": -377.9,
+   "route": -799.1,
+   "residual": -421.2
+  },
+  {
+   "from": "material2",
+   "to": "sf-d1",
+   "via": "sf1320m1",
+   "direct": -377.9,
+   "route": 54.7,
+   "residual": 432.6
+  },
+  {
+   "from": "material2",
+   "to": "sf-elo1320",
+   "via": "sf-d1",
+   "direct": -531.6,
+   "route": -110.5,
+   "residual": 421.2
+  },
+  {
+   "from": "material2",
+   "to": "sf-elo1320",
+   "via": "sf1320m1",
+   "direct": -531.6,
+   "route": -153.0,
+   "residual": 378.6
+  },
+  {
+   "from": "material2",
+   "to": "sf1320m1",
+   "via": "sf-d1",
+   "direct": 437.4,
+   "route": 4.8,
+   "residual": -432.6
+  },
+  {
+   "from": "material2",
+   "to": "sf1320m1",
+   "via": "sf-elo1320",
+   "direct": 437.4,
+   "route": 58.8,
+   "residual": -378.6
+  },
+  {
+   "from": "random",
+   "to": "sf-d1",
+   "via": "m1r50",
+   "direct": -637.3,
+   "route": -929.3,
+   "residual": -291.9
+  },
+  {
+   "from": "random",
+   "to": "sf-d1",
+   "via": "material1",
+   "direct": -637.3,
+   "route": -943.0,
+   "residual": -305.7
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-d3",
+   "via": "sf-elo1500",
+   "direct": -279.6,
+   "route": -334.7,
+   "residual": -55.1
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-d3",
+   "via": "sf-elo1700",
+   "direct": -279.6,
+   "route": -274.8,
+   "residual": 4.8
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1320",
+   "via": "material2",
+   "direct": 267.4,
+   "route": -153.7,
+   "residual": -421.2
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1320",
+   "via": "sf-elo1500",
+   "direct": 267.4,
+   "route": 289.8,
+   "residual": 22.4
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1320",
+   "via": "sf-elo1700",
+   "direct": 267.4,
+   "route": 368.5,
+   "residual": 101.1
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1320",
+   "via": "sf1320m1",
+   "direct": 267.4,
+   "route": -207.7,
+   "residual": -475.2
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1500",
+   "via": "sf-d3",
+   "direct": 122.4,
+   "route": 177.5,
+   "residual": 55.1
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1500",
+   "via": "sf-elo1320",
+   "direct": 122.4,
+   "route": 100.0,
+   "residual": -22.4
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1500",
+   "via": "sf-elo1700",
+   "direct": 122.4,
+   "route": 137.7,
+   "residual": 15.4
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1700",
+   "via": "sf-d3",
+   "direct": -19.0,
+   "route": -23.8,
+   "residual": -4.8
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1700",
+   "via": "sf-elo1320",
+   "direct": -19.0,
+   "route": -120.1,
+   "residual": -101.1
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1700",
+   "via": "sf-elo1500",
+   "direct": -19.0,
+   "route": -34.4,
+   "residual": -15.4
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf1320m1",
+   "via": "m1r50",
+   "direct": 382.7,
+   "route": 106.4,
+   "residual": -276.3
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf1320m1",
+   "via": "material1",
+   "direct": 382.7,
+   "route": 324.2,
+   "residual": -58.4
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf1320m1",
+   "via": "material2",
+   "direct": 382.7,
+   "route": 815.3,
+   "residual": 432.6
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf1320m1",
+   "via": "sf-elo1320",
+   "direct": 382.7,
+   "route": 857.8,
+   "residual": 475.2
+  },
+  {
+   "from": "sf-d3",
+   "to": "sf-elo1500",
+   "via": "sf-d1",
+   "direct": 457.1,
+   "route": 401.9,
+   "residual": -55.1
+  },
+  {
+   "from": "sf-d3",
+   "to": "sf-elo1500",
+   "via": "sf-elo1700",
+   "direct": 457.1,
+   "route": 412.6,
+   "residual": -44.5
+  },
+  {
+   "from": "sf-d3",
+   "to": "sf-elo1700",
+   "via": "sf-d1",
+   "direct": 255.8,
+   "route": 260.6,
+   "residual": 4.8
+  },
+  {
+   "from": "sf-d3",
+   "to": "sf-elo1700",
+   "via": "sf-elo1500",
+   "direct": 255.8,
+   "route": 300.3,
+   "residual": 44.5
+  },
+  {
+   "from": "sf-elo1320",
+   "to": "sf-elo1500",
+   "via": "sf-d1",
+   "direct": -167.4,
+   "route": -145.1,
+   "residual": 22.4
+  },
+  {
+   "from": "sf-elo1320",
+   "to": "sf-elo1500",
+   "via": "sf-elo1700",
+   "direct": -167.4,
+   "route": -230.8,
+   "residual": -63.3
+  },
+  {
+   "from": "sf-elo1320",
+   "to": "sf-elo1700",
+   "via": "sf-d1",
+   "direct": -387.5,
+   "route": -286.5,
+   "residual": 101.1
+  },
+  {
+   "from": "sf-elo1320",
+   "to": "sf-elo1700",
+   "via": "sf-elo1500",
+   "direct": -387.5,
+   "route": -324.2,
+   "residual": 63.3
+  },
+  {
+   "from": "sf-elo1320",
+   "to": "sf1320m1",
+   "via": "material2",
+   "direct": 590.4,
+   "route": 969.0,
+   "residual": 378.6
+  },
+  {
+   "from": "sf-elo1320",
+   "to": "sf1320m1",
+   "via": "sf-d1",
+   "direct": 590.4,
+   "route": 115.2,
+   "residual": -475.2
+  },
+  {
+   "from": "sf-elo1500",
+   "to": "sf-elo1700",
+   "via": "sf-d1",
+   "direct": -156.8,
+   "route": -141.4,
+   "residual": 15.4
+  },
+  {
+   "from": "sf-elo1500",
+   "to": "sf-elo1700",
+   "via": "sf-d3",
+   "direct": -156.8,
+   "route": -201.3,
+   "residual": -44.5
+  },
+  {
+   "from": "sf-elo1500",
+   "to": "sf-elo1700",
+   "via": "sf-elo1320",
+   "direct": -156.8,
+   "route": -220.1,
+   "residual": -63.3
+  }
+ ],
+ "checks": {
+  "adjacent_links_in_band": 5,
+  "adjacent_links_total": 9,
+  "max_abs_cycle_residual_elo": 475.2,
+  "route_trigger_150_fired": true,
+  "max_prediction_miss_pts": 10.6,
+  "miss_trigger_10_fired": true,
+  "unsaturated_triangles": 54
+ }
+}

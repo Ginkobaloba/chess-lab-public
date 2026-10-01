@@ -1,0 +1,433 @@
+{
+ "label": "engine-ladder Elo (Stockfish 19 UCI_Elo 1320-anchored, time control A: Stockfish 19, 1 thread, 100k nodes/move for UCI_Elo/Skill rungs; fixed depth for depth rungs), 95% CI. Not a human rating. Values below 1320 are extrapolated through the ladder chain.",
+ "net_player": "ONNX checkpoint via onnxruntime CPU, arg-max of the legal-move policy (1 node, no search)",
+ "anchor": "sf-elo1320",
+ "anchor_elo": 1320.0,
+ "ladder_sources": [
+  "D:\\chess-lab-data\\arena\\ladder-v2"
+ ],
+ "stage1_games_per_checkpoint_per_rung": 100,
+ "rungs": [
+  "sf-elo1320",
+  "sf-elo1500",
+  "sf-elo1700"
+ ],
+ "stage2_games_per_pairing": 0,
+ "stage2_nearest_rungs": 3,
+ "rating_wall_s_this_invocation": 0.1,
+ "commit": {
+  "commit": "676db5325fcb0d6b40bcd1b3d65d33e0c1f2ad67",
+  "dirty": false
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ },
+ "shared_process_games": 0,
+ "curve": [
+  {
+   "step": 16000,
+   "samples": 32768000,
+   "elo": 1340.8,
+   "ci95": [
+    1280.3,
+    1392.1
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.471218,
+   "onnx_bytes": 6014759,
+   "games": 140
+  },
+  {
+   "step": 32000,
+   "samples": 65536000,
+   "elo": 1371.7,
+   "ci95": [
+    1322.6,
+    1417.3
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.491352,
+   "onnx_bytes": 6014759,
+   "games": 220
+  },
+  {
+   "step": 48000,
+   "samples": 98304000,
+   "elo": 1456.1,
+   "ci95": [
+    1411.8,
+    1500.2
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.50309,
+   "onnx_bytes": 6014759,
+   "games": 220
+  },
+  {
+   "step": 64000,
+   "samples": 131072000,
+   "elo": 1478.6,
+   "ci95": [
+    1432.3,
+    1528.3
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.509446,
+   "onnx_bytes": 6014759,
+   "games": 220
+  },
+  {
+   "step": 80000,
+   "samples": 163840000,
+   "elo": 1485.6,
+   "ci95": [
+    1442.7,
+    1530.6
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.512256,
+   "onnx_bytes": 6014759,
+   "games": 220
+  }
+ ],
+ "rungs_fit": {
+  "sf-elo1320": {
+   "elo": 1320.0,
+   "ci95": [
+    1320.0,
+    1320.0
+   ]
+  },
+  "sf-elo1500": {
+   "elo": 1500.7,
+   "ci95": [
+    1472.3,
+    1532.5
+   ]
+  },
+  "sf-elo1700": {
+   "elo": 1652.7,
+   "ci95": [
+    1617.0,
+    1692.9
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "pair": "sf-elo1320~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    50,
+    10,
+    140
+   ],
+   "score": 0.275,
+   "score_ci95": [
+    0.2178,
+    0.3407
+   ],
+   "predicted": 0.2611,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1320~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    16,
+    6,
+    178
+   ],
+   "score": 0.095,
+   "score_ci95": [
+    0.0617,
+    0.1436
+   ],
+   "predicted": 0.1284,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1500~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    48,
+    19,
+    133
+   ],
+   "score": 0.2875,
+   "score_ci95": [
+    0.2292,
+    0.3538
+   ],
+   "predicted": 0.2943,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    41,
+    21,
+    38
+   ],
+   "score": 0.515,
+   "score_ci95": [
+    0.4183,
+    0.6106
+   ],
+   "predicted": 0.53,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    5,
+    5,
+    10
+   ],
+   "score": 0.375,
+   "score_ci95": [
+    0.1998,
+    0.5905
+   ],
+   "predicted": 0.2849,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    2,
+    0,
+    18
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0279,
+    0.301
+   ],
+   "predicted": 0.1425,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    46,
+    19,
+    35
+   ],
+   "score": 0.555,
+   "score_ci95": [
+    0.4574,
+    0.6486
+   ],
+   "predicted": 0.5739,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf-elo1500",
+   "games": 100,
+   "w_d_l": [
+    19,
+    24,
+    57
+   ],
+   "score": 0.31,
+   "score_ci95": [
+    0.2278,
+    0.4063
+   ],
+   "predicted": 0.3224,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    3,
+    6,
+    11
+   ],
+   "score": 0.3,
+   "score_ci95": [
+    0.1455,
+    0.519
+   ],
+   "predicted": 0.1656,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    64,
+    11,
+    25
+   ],
+   "score": 0.695,
+   "score_ci95": [
+    0.5989,
+    0.7766
+   ],
+   "predicted": 0.6864,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf-elo1500",
+   "games": 100,
+   "w_d_l": [
+    28,
+    24,
+    48
+   ],
+   "score": 0.4,
+   "score_ci95": [
+    0.3094,
+    0.498
+   ],
+   "predicted": 0.4361,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    6,
+    3,
+    11
+   ],
+   "score": 0.375,
+   "score_ci95": [
+    0.1998,
+    0.5905
+   ],
+   "predicted": 0.2439,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    62,
+    19,
+    19
+   ],
+   "score": 0.715,
+   "score_ci95": [
+    0.6199,
+    0.7942
+   ],
+   "predicted": 0.7136,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf-elo1500",
+   "games": 100,
+   "w_d_l": [
+    37,
+    21,
+    42
+   ],
+   "score": 0.475,
+   "score_ci95": [
+    0.3799,
+    0.572
+   ],
+   "predicted": 0.4682,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    2,
+    5,
+    13
+   ],
+   "score": 0.225,
+   "score_ci95": [
+    0.0959,
+    0.4427
+   ],
+   "predicted": 0.2685,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    63,
+    18,
+    19
+   ],
+   "score": 0.72,
+   "score_ci95": [
+    0.6251,
+    0.7986
+   ],
+   "predicted": 0.7217,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf-elo1500",
+   "games": 100,
+   "w_d_l": [
+    36,
+    19,
+    45
+   ],
+   "score": 0.455,
+   "score_ci95": [
+    0.3609,
+    0.5525
+   ],
+   "predicted": 0.4782,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    5,
+    6,
+    9
+   ],
+   "score": 0.4,
+   "score_ci95": [
+    0.2188,
+    0.6134
+   ],
+   "predicted": 0.2765,
+   "miss_pts": 0.0,
+   "saturated": false
+  }
+ ]
+}

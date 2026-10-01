@@ -1,0 +1,157 @@
+"""Turn recorded ladder games into a receipt directory.
+
+Usage:
+
+    python scripts/ladder_report.py --name ladder-v1 --arena D:/chess-lab-data/arena/ladder-v1 [--arena ...]
+
+Writes ``receipts/<name>/``: ``games.jsonl`` (every game, concatenated from the
+arena dirs), ``ladder-config*.json`` (copied), ``fit.json`` (joint fit, pair
+table, adjacency, cycle residuals) and ``RESULTS.md`` (the same, as tables).
+Every number in RESULTS.md comes from fit.json, which comes from games.jsonl.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import shutil
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from chesslab import analysis, hw  # noqa: E402
+from chesslab.ladder import ANCHOR, ANCHOR_ELO, RUNGS, tc_label  # noqa: E402
+
+LABEL = (
+    "engine-ladder Elo (Stockfish 19 UCI_Elo 1320-anchored, time control {tc}), 95% CI. "
+    "Not a human rating. Values below 1320 are extrapolated through the ladder chain."
+)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--name", required=True)
+    ap.add_argument("--arena", type=Path, action="append", required=True)
+    ap.add_argument("--out", type=Path, default=None,
+                     help="receipt directory (default: receipts/<name> under the repo root); "
+                          "use a scratch path to re-run a report without touching a committed receipt")
+    ap.add_argument("--resamples", type=int, default=1000)
+    ap.add_argument("--exclude", nargs="*", default=[], help="players to leave out of the fit")
+    ap.add_argument("--diff", nargs=2, metavar=("A", "B"), action="append", default=[],
+                     help="also report Elo(A) - Elo(B) with a paired bootstrap 95% CI (EloFit.diff_ci); "
+                          "repeatable for more than one named pair, all from the same bootstrap resamples")
+    args = ap.parse_args()
+    out = args.out if args.out is not None else hw.REPO_ROOT / "receipts" / args.name
+    out.mkdir(parents=True, exist_ok=True)
+    games = [g for g in analysis.load_games(a / "games.jsonl" for a in args.arena)
+             if g["a"] not in args.exclude and g["b"] not in args.exclude]
+    with open(out / "games.jsonl", "w", encoding="utf-8", newline="\n") as fh:
+        for g in sorted(games, key=lambda g: g["game_id"]):
+            fh.write(json.dumps(g, separators=(",", ":")) + "\n")
+    specs: dict[str, str] = {}
+    for i, a in enumerate(args.arena):
+        shutil.copyfile(a / "ladder-config.json", out / f"ladder-config{'' if i == 0 else f'-{i}'}.json")
+        with open(a / "ladder-config.json", encoding="utf-8") as fh:
+            specs.update(json.load(fh).get("players", {}))
+    pairs = analysis.counts(games)
+    f = analysis.fit(pairs, ANCHOR, ANCHOR_ELO, resamples=args.resamples)
+    table = analysis.pair_table(pairs, f)
+    adj = analysis.adjacent(pairs, f)
+    rts = analysis.routes(pairs)
+    terms: dict[str, int] = {}
+    for g in games:
+        terms[g["termination"]] = terms.get(g["termination"], 0) + 1
+    worst_route = max((abs(r["residual"]) for r in rts), default=None)
+    worst_miss = max(r["miss_pts"] for r in table)
+    diffs = []
+    for a, b in args.diff:
+        d_elo, (d_lo, d_hi) = f.diff_ci(a, b)
+        diffs.append({"a": a, "b": b, "elo_diff": round(d_elo, 1), "ci95": [round(d_lo, 1), round(d_hi, 1)]})
+    present_specs = {n: specs.get(n, RUNGS.get(n, "")) for n in f.elo}
+    result = {
+        "label": LABEL.format(tc=tc_label(present_specs, ANCHOR)),
+        "anchor": ANCHOR,
+        "anchor_elo": ANCHOR_ELO,
+        "games": len(games),
+        "terminations": terms,
+        "resamples": args.resamples,
+        "bootstrap_seed": 0,
+        "ratings": {n: {"elo": round(f.elo[n], 1), "ci95": [round(x, 1) for x in f.ci[n]]}
+                    for n in sorted(f.elo, key=f.elo.get)},
+        "pairs": table,
+        "adjacent": adj,
+        "routes": rts,
+        "checks": {
+            "adjacent_links_in_band": sum(r["in_band_20_80"] for r in adj),
+            "adjacent_links_total": len(adj),
+            "max_abs_cycle_residual_elo": worst_route,
+            "route_trigger_150_fired": worst_route is not None and worst_route > 150,
+            "max_prediction_miss_pts": worst_miss,
+            "miss_trigger_10_fired": worst_miss > 10,
+            "unsaturated_triangles": len(rts),
+        },
+        # "diff": kept singular for backward compatibility with receipts/int8-v1 (single --diff);
+        # "diffs" is the full list and is what multi-pair reports (this one) should read.
+        "diff": diffs[0] if len(diffs) == 1 else None,
+        "diffs": diffs,
+    }
+    (out / "fit.json").write_text(json.dumps(result, indent=1) + "\n", encoding="utf-8", newline="\n")
+    lines = [
+        f"# Ladder receipt: {args.name}",
+        "",
+        f"Label: {result['label']}",
+        "",
+        f"Generated by `scripts/ladder_report.py` from `games.jsonl` ({len(games)} games). "
+        "Configs: `ladder-config*.json` (commit, hardware, seeds, wall time).",
+        "",
+        "## Ratings (joint Bradley-Terry, anchor fixed, stratified bootstrap)",
+        "",
+        "| player | Elo | 95% CI | note |",
+        "|---|---|---|---|",
+    ]
+    for n, r in result["ratings"].items():
+        note = "anchor (fixed)" if n == ANCHOR else ("extrapolated below 1320" if r["elo"] < ANCHOR_ELO else "")
+        lines.append(f"| {n} | {r['elo']:.0f} | {r['ci95'][0]:.0f} to {r['ci95'][1]:.0f} | {note} |")
+    lines += ["", "## Pairings (observed vs joint-fit prediction)", "",
+              "| pair | games | W-D-L (first player) | score | score 95% CI | predicted | miss (pts) |",
+              "|---|---|---|---|---|---|---|"]
+    for r in table:
+        w, d, l_ = r["w_d_l"]
+        sat = " (saturated)" if r["saturated"] else ""
+        lines.append(f"| {r['pair']} | {r['games']} | {w}-{d}-{l_} | {r['score']:.3f}{sat} | "
+                     f"{r['score_ci95'][0]:.3f} to {r['score_ci95'][1]:.3f} | {r['predicted']:.3f} | {r['miss_pts']:.1f} |")
+    lines += ["", "## Adjacent links (sorted by fitted Elo; information needs 0.20 to 0.80)", "",
+              "| link | games | score of stronger | in band |", "|---|---|---|---|"]
+    for r in adj:
+        s = "n/a" if r["score_upper"] is None else f"{r['score_upper']:.3f}"
+        lines.append(f"| {r['link']} | {r['games']} | {s} | {'yes' if r['in_band_20_80'] else 'NO'} |")
+    lines += ["", "## Cycle residuals (direct pairwise Elo vs two-link route, unsaturated pairings only)", ""]
+    if rts:
+        lines += ["| from | to | via | direct | route | residual |", "|---|---|---|---|---|---|"]
+        for r in rts:
+            lines.append(f"| {r['from']} | {r['to']} | {r['via']} | {r['direct']:.0f} | {r['route']:.0f} | {r['residual']:.0f} |")
+    else:
+        lines.append("No triangle has all three pairings unsaturated, so no two-route comparison is possible.")
+    for diff in diffs:
+        sig = "not distinguishable from 0 (CI contains 0)" if diff["ci95"][0] < 0 < diff["ci95"][1] else "distinguishable from 0"
+        lines += ["", f"## Named pair difference: {diff['a']} minus {diff['b']}", "",
+                  f"Elo({diff['a']}) - Elo({diff['b']}) = {diff['elo_diff']:.1f}, 95% CI "
+                  f"{diff['ci95'][0]:.1f} to {diff['ci95'][1]:.1f} (paired bootstrap, `EloFit.diff_ci`, same "
+                  f"resamples as the joint fit above). {sig}.", ""]
+    c = result["checks"]
+    lines += ["", "## Memo reversal-trigger checks", "",
+              f"- Adjacent links in the 20-80% band: {c['adjacent_links_in_band']} of {c['adjacent_links_total']}",
+              f"- Max |cycle residual|: {c['max_abs_cycle_residual_elo']} Elo "
+              f"(trigger > 150: {'FIRED' if c['route_trigger_150_fired'] else 'not fired'}; "
+              f"{c['unsaturated_triangles']} unsaturated triangles)",
+              f"- Max prediction miss outside the observed 95% CI: {c['max_prediction_miss_pts']} pts "
+              f"(trigger > 10: {'FIRED' if c['miss_trigger_10_fired'] else 'not fired'})",
+              f"- Terminations: {terms}", ""]
+    (out / "RESULTS.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
+    print("\n".join(lines))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

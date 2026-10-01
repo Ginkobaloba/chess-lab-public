@@ -1,0 +1,32 @@
+{
+ "note": "Concatenation of four arenas for one joint fit: ladder-v2 (10-rung round robin, receipts/ladder-v2), rate-sup-v1 (12 sup-v1 checkpoints vs ladder-v2 rungs, receipts/sup-v1-ratings), int8-v1 (int8-final vs its 3 nearest rungs, receipts/int8-v1), and fp16-v1 (fp16-final vs the same 3 rungs, this receipt). No games were replayed to build this file; it is a copy-concatenation of already-recorded, already-receipted games.jsonl files plus the new fp16-final games.",
+ "sources": [
+  "ladder-v2",
+  "rate-sup-v1",
+  "int8-v1",
+  "fp16-v1"
+ ],
+ "source_paths": [
+  "D:\\chess-lab-data\\arena\\ladder-v2\\games.jsonl",
+  "D:\\chess-lab-data\\arena\\rate-sup-v1\\games.jsonl",
+  "D:\\chess-lab-data\\arena\\int8-v1\\games.jsonl",
+  "D:\\chess-lab-data\\arena\\fp16-v1\\games.jsonl"
+ ],
+ "games_total": 14880,
+ "commit": {
+  "commit": "f1811de774e34bd16f0056e2fd282324d734244e",
+  "dirty": true
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ }
+}

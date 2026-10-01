@@ -1,0 +1,19 @@
+{
+ "source": "D:\\chess-lab-data\\test\\final_fp32.onnx",
+ "method": "onnxruntime.quantization.quantize_dynamic, QInt8 weights",
+ "val_positions": 50000,
+ "fp32": {
+  "bytes": 6014759,
+  "val_top1_unmasked": 0.50816
+ },
+ "int8": {
+  "bytes": 1548347,
+  "val_top1_unmasked": 0.49706
+ },
+ "argmax_agreement": 0.84584,
+ "note": "top-1 here is over all 4096 logits (unmasked), a slight underestimate of legal-move top-1. Ladder strength of the int8 file is not measured by this script.",
+ "commit": {
+  "commit": "b744247e1cb2b725907c21e670223ea4e8765ef7",
+  "dirty": false
+ }
+}

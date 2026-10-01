@@ -1,0 +1,29 @@
+{
+  "name": "@chess-lab/web",
+  "version": "0.1.0",
+  "description": "Browser build prep for chess-lab: the policy net in onnxruntime-web inside a Web Worker, a chess.js move generator and an encoder that matches chesslab/encode.py, plus a local dev page.",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "node scripts/pack.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "serve": "node scripts/serve.mjs",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0",
+    "onnxruntime-web": "1.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.3",
+    "esbuild": "0.28.2",
+    "playwright-core": "1.60.0",
+    "typescript": "7.0.2",
+    "vitest": "5.0.1"
+  }
+}

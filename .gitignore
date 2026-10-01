@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.session-log
+# Data, runs, binaries and weights live under D:\chess-lab-data, never in git.
+*.pgn
+*.pgn.zst
+*.npz
+*.pt
+*.onnx
+*.exe

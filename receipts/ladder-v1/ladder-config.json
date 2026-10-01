@@ -1,0 +1,98 @@
+{
+ "run_id": "ladder-v1",
+ "games": 200,
+ "players": {
+  "random": "random",
+  "material1": "material1",
+  "sf-d1": "sf:depth=1",
+  "sf-skill0": "sf:skill=0,nodes=100000",
+  "sf-d3": "sf:depth=3",
+  "sf-elo1320": "sf:elo=1320,nodes=100000"
+ },
+ "pairs": [
+  [
+   "material1",
+   "sf-d1"
+  ],
+  [
+   "material1",
+   "sf-d3"
+  ],
+  [
+   "material1",
+   "sf-elo1320"
+  ],
+  [
+   "material1",
+   "sf-skill0"
+  ],
+  [
+   "random",
+   "material1"
+  ],
+  [
+   "random",
+   "sf-d1"
+  ],
+  [
+   "random",
+   "sf-d3"
+  ],
+  [
+   "random",
+   "sf-elo1320"
+  ],
+  [
+   "random",
+   "sf-skill0"
+  ],
+  [
+   "sf-d1",
+   "sf-d3"
+  ],
+  [
+   "sf-d1",
+   "sf-elo1320"
+  ],
+  [
+   "sf-d1",
+   "sf-skill0"
+  ],
+  [
+   "sf-d3",
+   "sf-elo1320"
+  ],
+  [
+   "sf-skill0",
+   "sf-d3"
+  ],
+  [
+   "sf-skill0",
+   "sf-elo1320"
+  ]
+ ],
+ "workers": 16,
+ "label": "memo-step1-6rung-round-robin-TC-A",
+ "process_per_game": true,
+ "seed_formula": "derive_seed(run_id, pairing_id, game_index); chesslab/seeds.py",
+ "commit": {
+  "commit": "unknown",
+  "dirty": null
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ },
+ "started": "2026-09-19T02:06:52-0500",
+ "wall_s": 1310.9,
+ "games_total": 3000,
+ "shared_process_games": 0
+}

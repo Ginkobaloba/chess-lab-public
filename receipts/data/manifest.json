@@ -1,0 +1,271 @@
+{
+ "source_url": "https://database.lichess.org/standard/lichess_db_standard_rated_2026-08.pgn.zst",
+ "source_published_sha256_full_file": "6bf6fa8a5dee7bb81d1874ac312160060daf12f18a29dc2740a3bf6f5e5e6248",
+ "prefix_file": "lichess_db_standard_rated_2026-08.prefix4GiB.pgn.zst",
+ "prefix_bytes": 4294967296,
+ "prefix_sha256": "c37f31319cbf4a1b2b61a705ff7396d49386815f1f050bcf0acd0d4b595d7141",
+ "license": "Lichess database exports: CC0 (database.lichess.org)",
+ "filter": {
+  "speeds": [
+   "Rated Blitz game",
+   "Rated Rapid game",
+   "Rated Classical game"
+  ],
+  "terminations": [
+   "Normal",
+   "Time forfeit"
+  ],
+  "elo_both_in": [
+   1800,
+   2199
+  ],
+  "min_clock_s_after_move": 30.0,
+  "max_games": 5000000,
+  "val_every": 50,
+  "underpromotions": "dropped (no policy index)"
+ },
+ "encoding": "chesslab/encode.py (67-byte compact, 4096 from-to policy, mover-perspective result)",
+ "commit": {
+  "commit": "3b8c6551c7aa4081af487728d4825dea5b557187",
+  "dirty": false
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ },
+ "games_seen": 13084145,
+ "games_kept": 1608168,
+ "games_parse_errors": 0,
+ "truncated_tail": 0,
+ "positions": {
+  "train": 105607106,
+  "val": 2153874
+ },
+ "shards": [
+  {
+   "file": "shard_0000.npz",
+   "positions": 2000017
+  },
+  {
+   "file": "shard_0001.npz",
+   "positions": 2000026
+  },
+  {
+   "file": "shard_0002.npz",
+   "positions": 2000025
+  },
+  {
+   "file": "shard_0003.npz",
+   "positions": 2000051
+  },
+  {
+   "file": "shard_0004.npz",
+   "positions": 2000001
+  },
+  {
+   "file": "shard_0005.npz",
+   "positions": 2000003
+  },
+  {
+   "file": "shard_0006.npz",
+   "positions": 2000080
+  },
+  {
+   "file": "shard_0007.npz",
+   "positions": 2000026
+  },
+  {
+   "file": "shard_0008.npz",
+   "positions": 2000004
+  },
+  {
+   "file": "shard_0009.npz",
+   "positions": 2000059
+  },
+  {
+   "file": "shard_0010.npz",
+   "positions": 2000005
+  },
+  {
+   "file": "shard_0011.npz",
+   "positions": 2000021
+  },
+  {
+   "file": "shard_0012.npz",
+   "positions": 2000015
+  },
+  {
+   "file": "shard_0013.npz",
+   "positions": 2000071
+  },
+  {
+   "file": "shard_0014.npz",
+   "positions": 2000008
+  },
+  {
+   "file": "shard_0015.npz",
+   "positions": 2000022
+  },
+  {
+   "file": "shard_0016.npz",
+   "positions": 2000063
+  },
+  {
+   "file": "shard_0017.npz",
+   "positions": 2000007
+  },
+  {
+   "file": "shard_0018.npz",
+   "positions": 2000005
+  },
+  {
+   "file": "shard_0019.npz",
+   "positions": 2000000
+  },
+  {
+   "file": "shard_0020.npz",
+   "positions": 2000007
+  },
+  {
+   "file": "shard_0021.npz",
+   "positions": 2000074
+  },
+  {
+   "file": "shard_0022.npz",
+   "positions": 2000044
+  },
+  {
+   "file": "shard_0023.npz",
+   "positions": 2000021
+  },
+  {
+   "file": "shard_0024.npz",
+   "positions": 2000008
+  },
+  {
+   "file": "shard_0025.npz",
+   "positions": 2000023
+  },
+  {
+   "file": "shard_0026.npz",
+   "positions": 2000021
+  },
+  {
+   "file": "shard_0027.npz",
+   "positions": 2000060
+  },
+  {
+   "file": "shard_0028.npz",
+   "positions": 2000028
+  },
+  {
+   "file": "shard_0029.npz",
+   "positions": 2000015
+  },
+  {
+   "file": "shard_0030.npz",
+   "positions": 2000064
+  },
+  {
+   "file": "shard_0031.npz",
+   "positions": 2000118
+  },
+  {
+   "file": "shard_0032.npz",
+   "positions": 2000003
+  },
+  {
+   "file": "shard_0033.npz",
+   "positions": 2000044
+  },
+  {
+   "file": "shard_0034.npz",
+   "positions": 2000016
+  },
+  {
+   "file": "shard_0035.npz",
+   "positions": 2000077
+  },
+  {
+   "file": "shard_0036.npz",
+   "positions": 2000016
+  },
+  {
+   "file": "shard_0037.npz",
+   "positions": 2000039
+  },
+  {
+   "file": "shard_0038.npz",
+   "positions": 2000029
+  },
+  {
+   "file": "shard_0039.npz",
+   "positions": 2000006
+  },
+  {
+   "file": "shard_0040.npz",
+   "positions": 2000046
+  },
+  {
+   "file": "shard_0041.npz",
+   "positions": 2000048
+  },
+  {
+   "file": "shard_0042.npz",
+   "positions": 2000065
+  },
+  {
+   "file": "shard_0043.npz",
+   "positions": 2000002
+  },
+  {
+   "file": "shard_0044.npz",
+   "positions": 2000133
+  },
+  {
+   "file": "shard_0045.npz",
+   "positions": 2000039
+  },
+  {
+   "file": "shard_0046.npz",
+   "positions": 2000060
+  },
+  {
+   "file": "shard_0047.npz",
+   "positions": 2000142
+  },
+  {
+   "file": "shard_0048.npz",
+   "positions": 2000046
+  },
+  {
+   "file": "shard_0049.npz",
+   "positions": 2000111
+  },
+  {
+   "file": "shard_0050.npz",
+   "positions": 2000083
+  },
+  {
+   "file": "shard_0051.npz",
+   "positions": 2000008
+  },
+  {
+   "file": "shard_0052.npz",
+   "positions": 2000020
+  },
+  {
+   "file": "shard_0053.npz",
+   "positions": 1758955
+  }
+ ],
+ "wall_s": 2042.0
+}

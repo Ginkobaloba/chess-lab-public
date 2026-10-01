@@ -1,0 +1,432 @@
+{
+ "label": "engine-ladder Elo (Stockfish 19 UCI_Elo 1320-anchored, time control A: Stockfish 19, 1 thread, 100k nodes/move for UCI_Elo/Skill rungs; fixed depth for depth rungs), 95% CI. Not a human rating. Values below 1320 are extrapolated through the ladder chain.",
+ "anchor": "sf-elo1320",
+ "anchor_elo": 1320.0,
+ "games": 3000,
+ "terminations": {
+  "checkmate": 2780,
+  "threefold_repetition": 201,
+  "stalemate": 15,
+  "cap": 1,
+  "insufficient_material": 2,
+  "fifty_moves": 1
+ },
+ "resamples": 1000,
+ "bootstrap_seed": 0,
+ "ratings": {
+  "random": {
+   "elo": 419.2,
+   "ci95": [
+    338.6,
+    480.8
+   ]
+  },
+  "material1": {
+   "elo": 792.7,
+   "ci95": [
+    739.7,
+    833.6
+   ]
+  },
+  "sf-skill0": {
+   "elo": 1319.4,
+   "ci95": [
+    1284.0,
+    1351.6
+   ]
+  },
+  "sf-elo1320": {
+   "elo": 1320.0,
+   "ci95": [
+    1320.0,
+    1320.0
+   ]
+  },
+  "sf-d1": {
+   "elo": 1581.8,
+   "ci95": [
+    1549.0,
+    1617.1
+   ]
+  },
+  "sf-d3": {
+   "elo": 1879.6,
+   "ci95": [
+    1838.5,
+    1926.6
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "pair": "random~material1",
+   "games": 200,
+   "w_d_l": [
+    1,
+    26,
+    173
+   ],
+   "score": 0.07,
+   "score_ci95": [
+    0.0422,
+    0.1141
+   ],
+   "predicted": 0.1043,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "random~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    12,
+    188
+   ],
+   "score": 0.03,
+   "score_ci95": [
+    0.0138,
+    0.0639
+   ],
+   "predicted": 0.0012,
+   "miss_pts": 1.26,
+   "saturated": false
+  },
+  {
+   "pair": "random~sf-skill0",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0056,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    0,
+    200
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.0188
+   ],
+   "predicted": 0.0002,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0056,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    18,
+    182
+   ],
+   "score": 0.045,
+   "score_ci95": [
+    0.0239,
+    0.0833
+   ],
+   "predicted": 0.0105,
+   "miss_pts": 1.33,
+   "saturated": false
+  },
+  {
+   "pair": "material1~sf-skill0",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.046,
+   "miss_pts": 2.25,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    4,
+    196
+   ],
+   "score": 0.01,
+   "score_ci95": [
+    0.0027,
+    0.0357
+   ],
+   "predicted": 0.0019,
+   "miss_pts": 0.08,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0459,
+   "miss_pts": 1.81,
+   "saturated": true
+  },
+  {
+   "pair": "sf-d1~sf-skill0",
+   "games": 200,
+   "w_d_l": [
+    156,
+    31,
+    13
+   ],
+   "score": 0.8575,
+   "score_ci95": [
+    0.8023,
+    0.8992
+   ],
+   "predicted": 0.8191,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-d1~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    5,
+    56,
+    139
+   ],
+   "score": 0.165,
+   "score_ci95": [
+    0.12,
+    0.2227
+   ],
+   "predicted": 0.1526,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-d1~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    148,
+    39,
+    13
+   ],
+   "score": 0.8375,
+   "score_ci95": [
+    0.7801,
+    0.8822
+   ],
+   "predicted": 0.8186,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-skill0~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    1,
+    9,
+    190
+   ],
+   "score": 0.0275,
+   "score_ci95": [
+    0.0123,
+    0.0606
+   ],
+   "predicted": 0.0382,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-skill0~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    94,
+    13,
+    93
+   ],
+   "score": 0.5025,
+   "score_ci95": [
+    0.4338,
+    0.5711
+   ],
+   "predicted": 0.4992,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-d3~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    193,
+    7,
+    0
+   ],
+   "score": 0.9825,
+   "score_ci95": [
+    0.9532,
+    0.9936
+   ],
+   "predicted": 0.9616,
+   "miss_pts": 0.0,
+   "saturated": true
+  }
+ ],
+ "adjacent": [
+  {
+   "link": "material1 over random",
+   "games": 200,
+   "score_upper": 0.93,
+   "in_band_20_80": false
+  },
+  {
+   "link": "sf-skill0 over material1",
+   "games": 200,
+   "score_upper": 0.9975,
+   "in_band_20_80": false
+  },
+  {
+   "link": "sf-elo1320 over sf-skill0",
+   "games": 200,
+   "score_upper": 0.4975,
+   "in_band_20_80": true
+  },
+  {
+   "link": "sf-d1 over sf-elo1320",
+   "games": 200,
+   "score_upper": 0.8375,
+   "in_band_20_80": false
+  },
+  {
+   "link": "sf-d3 over sf-d1",
+   "games": 200,
+   "score_upper": 0.835,
+   "in_band_20_80": false
+  }
+ ],
+ "routes": [
+  {
+   "from": "material1",
+   "to": "random",
+   "via": "sf-d1",
+   "direct": 443.7,
+   "route": 68.6,
+   "residual": -375.1
+  },
+  {
+   "from": "material1",
+   "to": "sf-d1",
+   "via": "random",
+   "direct": -521.8,
+   "route": -146.7,
+   "residual": 375.1
+  },
+  {
+   "from": "random",
+   "to": "sf-d1",
+   "via": "material1",
+   "direct": -590.4,
+   "route": -965.5,
+   "residual": -375.1
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-d3",
+   "via": "sf-skill0",
+   "direct": -279.6,
+   "route": -295.5,
+   "residual": -15.9
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-elo1320",
+   "via": "sf-skill0",
+   "direct": 282.7,
+   "route": 311.0,
+   "residual": 28.3
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-skill0",
+   "via": "sf-d3",
+   "direct": 309.3,
+   "route": 325.2,
+   "residual": 15.9
+  },
+  {
+   "from": "sf-d1",
+   "to": "sf-skill0",
+   "via": "sf-elo1320",
+   "direct": 309.3,
+   "route": 281.0,
+   "residual": -28.3
+  },
+  {
+   "from": "sf-d3",
+   "to": "sf-skill0",
+   "via": "sf-d1",
+   "direct": 604.8,
+   "route": 588.8,
+   "residual": -15.9
+  },
+  {
+   "from": "sf-elo1320",
+   "to": "sf-skill0",
+   "via": "sf-d1",
+   "direct": -1.7,
+   "route": 26.5,
+   "residual": 28.3
+  }
+ ],
+ "checks": {
+  "adjacent_links_in_band": 1,
+  "adjacent_links_total": 5,
+  "max_abs_cycle_residual_elo": 375.1,
+  "route_trigger_150_fired": true,
+  "max_prediction_miss_pts": 2.25,
+  "miss_trigger_10_fired": false,
+  "unsaturated_triangles": 9
+ }
+}

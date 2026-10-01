@@ -1,0 +1,108 @@
+{
+ "schema": "chess-lab/web-bundle-size/v1",
+ "generator": "web/scripts/pack.mjs --receipt",
+ "commit": "707e16551d094483ec2942a3cac418c5b2b86a1c",
+ "dirty": false,
+ "node": "v22.14.0",
+ "versions": {
+  "onnxruntime-web": "1.30.0",
+  "chess.js": "1.4.0",
+  "esbuild": "0.28.2"
+ },
+ "notes": [
+  "bytes: file size; gzipBytes: gzip level 9; brotliBytes: brotli quality 11 (what a server sends depends on its compression settings).",
+  "runtime = loader + worker + the onnxruntime-web wasm; first_move = runtime + the fp32 model (the rated file); first_move_by_model = runtime + each exported model (only fp32 is rated).",
+  "The loader is fetched with the page; the worker, wasm and model only when a model is first loaded."
+ ],
+ "files": [
+  {
+   "name": "chess-lab.js",
+   "bytes": 1599,
+   "gzipBytes": 786,
+   "brotliBytes": 691,
+   "sha256": "629762ae6b21876c6629ab4bfa8fe1c57ae64f349fd464ca68ee839a910f6a3d"
+  },
+  {
+   "name": "chess-lab-worker.js",
+   "bytes": 117469,
+   "gzipBytes": 40143,
+   "brotliBytes": 35104,
+   "sha256": "cf743207e90e20cb846a287ed3d6b776201856321c9cdec6472593b3c43f6293"
+  },
+  {
+   "name": "ort-wasm-simd-threaded.wasm",
+   "bytes": 14239897,
+   "gzipBytes": 3687160,
+   "brotliBytes": 2355011,
+   "sha256": "3398c10d07d229bd91b364548e130e0e51a8e5704b88c7c083ebbeb78842dee2"
+  },
+  {
+   "name": "THIRD_PARTY_NOTICES.txt",
+   "bytes": 2260,
+   "gzipBytes": 1242,
+   "brotliBytes": 945,
+   "sha256": "a09a7d541cd79bfe449b1fbfd85d39807f28ca3ca471c65775aaf02cce2ddc25"
+  }
+ ],
+ "models": [
+  {
+   "id": "fp32",
+   "file": "sup-v1-final.onnx",
+   "rated": true,
+   "bytes": 6014759,
+   "gzipBytes": 5585440,
+   "brotliBytes": 5524136,
+   "sha256": "b45c625b6e5fea57c8d43610ec9e5d8b34ecb0246e8a77296ca238d547d153b6"
+  },
+  {
+   "id": "int8",
+   "file": "sup-v1-final.int8.onnx",
+   "rated": false,
+   "bytes": 1548347,
+   "gzipBytes": 970634,
+   "brotliBytes": 919549,
+   "sha256": "32a798c8af42fa2eb7b4ef9df5bd991fd80c26978900b56147dbecd8627266a4"
+  },
+  {
+   "id": "fp16w",
+   "file": "sup-v1-final.fp16w.onnx",
+   "rated": false,
+   "bytes": 3016025,
+   "gzipBytes": 2789104,
+   "brotliBytes": 2655498,
+   "sha256": "0c4382a2b21f98d55d69d47540ee47c63766baaaf4b8487811b6f04a16456304"
+  }
+ ],
+ "totals": {
+  "runtime": {
+   "bytes": 14358965,
+   "gzipBytes": 3728089,
+   "brotliBytes": 2390806
+  },
+  "first_move": {
+   "bytes": 20373724,
+   "gzipBytes": 9313529,
+   "brotliBytes": 7914942
+  },
+  "first_move_by_model": {
+   "fp32": {
+    "rated": true,
+    "bytes": 20373724,
+    "gzipBytes": 9313529,
+    "brotliBytes": 7914942
+   },
+   "int8": {
+    "rated": false,
+    "bytes": 15907312,
+    "gzipBytes": 4698723,
+    "brotliBytes": 3310355
+   },
+   "fp16w": {
+    "rated": false,
+    "bytes": 17374990,
+    "gzipBytes": 6517193,
+    "brotliBytes": 5046304
+   }
+  }
+ }
+}

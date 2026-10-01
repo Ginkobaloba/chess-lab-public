@@ -1,0 +1,48 @@
+{
+ "run_id": "fp16-v1",
+ "games": 100,
+ "players": {
+  "fp16-final": "net:D:/chess-lab-data/export/sup-v1-final.fp16w.onnx",
+  "sf-elo1320": "sf:elo=1320,nodes=100000",
+  "sf-elo1500": "sf:elo=1500,nodes=100000",
+  "sf-d1": "sf:depth=1"
+ },
+ "pairs": [
+  [
+   "fp16-final",
+   "sf-d1"
+  ],
+  [
+   "fp16-final",
+   "sf-elo1320"
+  ],
+  [
+   "fp16-final",
+   "sf-elo1500"
+  ]
+ ],
+ "workers": 16,
+ "label": "",
+ "process_per_game": true,
+ "seed_formula": "derive_seed(run_id, pairing_id, game_index); chesslab/seeds.py",
+ "commit": {
+  "commit": "f1811de774e34bd16f0056e2fd282324d734244e",
+  "dirty": false
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ },
+ "started": "2026-09-19T14:00:05-0500",
+ "wall_s": 147.4,
+ "games_total": 300,
+ "shared_process_games": 0
+}

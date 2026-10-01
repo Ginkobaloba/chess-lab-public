@@ -1,0 +1,6 @@
+# 2026-09-19 13:43 CDT - int8 rated, not just argmax-checked
+- **Who:** Agent, technical.
+- **Change:** **int8 rated, not just argmax-checked.** The quantized export (84.6% argmax agreement to fp32) was played on the ladder against its 3 nearest rungs (sf-elo1320, sf-elo1500, sf-d1; 100 games each) and joint-fit alongside the existing ladder-v2 and sup-v1-ratings games with zero replays. Result: 1383 (1348 to 1418) vs fp's 1444 (1411 to 1478) in the same fit, delta -61.0 Elo (95% CI -106.3 to -20.0, paired bootstrap) -- the CI excludes 0, so int8 is a real, measurable regression, not statistically indistinguishable from fp. `receipts/int8-v1/`. Added `--diff A B` to `scripts/ladder_report.py` (paired Elo-difference CI via the existing `EloFit.diff_ci`) since nothing computed that before; tested.
+- **Why:** Stated inline in Change: the single-file ledger recorded what and why in one bullet, and this entry keeps that text verbatim.
+- **State after:** As recorded at the time; a later entry supersedes this one only where it says so.
+- **Refs:** Moved from `docs/LEDGER.md`: appended there by the commit "receipts: rate the int8 model on the engine ladder" (PR #5), and moved into this file when the PR was rebased onto the one-file-per-entry ledger. The time is that commit's author time.

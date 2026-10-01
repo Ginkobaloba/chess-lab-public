@@ -1,0 +1,45 @@
+<!doctype html>
+<!-- Local dev page for the browser build (node scripts/serve.mjs). Engineering only: not site copy, no ratings. -->
+<!-- Provenance: the head, the :root palette (background, text, muted and selection colors) and the page frame are
+     adapted from Ginkobaloba/draughts-lab web/demo/index.html at commit 0a5c5a0fe6cc3443565937a738509f5de9479b19
+     (Paradigm-owned, MIT). The board and the script are new. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>chess-lab dev page</title>
+<style>
+  :root { color-scheme: light dark; --bg: #fafaf7; --fg: #1b1b1b; --muted: #5b5b5b; --light: #efe6d2; --dark: #9b7b55; --sel: #e0edff; --target: #1a73e8; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #151515; --fg: #ececec; --muted: #a8a8a8; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 40rem; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.3rem; margin: 0 0 .5rem; }
+  .note { color: var(--muted); font-size: .9rem; }
+  #board { display: grid; grid-template-columns: repeat(8, 1fr); grid-template-rows: repeat(8, 1fr); width: min(100%, 32rem); aspect-ratio: 1; border: 1px solid var(--muted); }
+  .sq { border: 0; margin: 0; padding: 0; font-size: clamp(1.2rem, 6vw, 2.4rem); line-height: 1; color: #111; cursor: pointer; }
+  .sq.light { background: var(--light); }
+  .sq.dark { background: var(--dark); }
+  .sq.sel { background: var(--sel); }
+  .sq.target { box-shadow: inset 0 0 0 3px var(--target); }
+  .sq:focus-visible { outline: 3px solid #000; outline-offset: -3px; }
+  .controls { display: flex; gap: .5rem; margin: .75rem 0; }
+  button.ctl { font: inherit; padding: .3rem .7rem; }
+  #status { min-height: 1.5em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>chess-lab dev page</h1>
+  <p class="note">Local testing of the browser build: the network runs in a Web Worker through onnxruntime-web. Not site copy.</p>
+  <p class="note" id="model-info"></p>
+  <div class="controls">
+    <button class="ctl" id="new-white" type="button">New game, play White</button>
+    <button class="ctl" id="new-black" type="button">New game, play Black</button>
+  </div>
+  <div id="board" role="group" aria-label="Board"></div>
+  <p id="status" role="status" aria-live="polite"></p>
+</main>
+<script type="module" src="../dist/dev.js"></script>
+</body>
+</html>

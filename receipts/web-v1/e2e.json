@@ -1,0 +1,105 @@
+{
+ "schema": "chess-lab/web-e2e/v1",
+ "generator": "web/scripts/e2e.mjs",
+ "phase": "all",
+ "commit": "59dd7c54b679613fdd79d167924c44c2c932352b",
+ "chromium": "148.0.7778.96",
+ "node": "v22.14.0",
+ "host": {
+  "cpu": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "logical_cpus": 32
+ },
+ "checks": "all passed",
+ "runs": {
+  "start": {
+   "move": "e2e4",
+   "san": "e4",
+   "legalCount": 20,
+   "wdl": [
+    0.49436508028436676,
+    0.051376683975291895,
+    0.4542582357403413
+   ]
+  },
+  "cancel": {
+   "a": "e7e5",
+   "b": null,
+   "d": null,
+   "after": "d7d5"
+  },
+  "parity": {
+   "positions": 269,
+   "checked": 269,
+   "same": 269,
+   "max_abs_top1_logit_diff": 0.00000477722167957495,
+   "tolerance": 0.001,
+   "mismatches": []
+  },
+  "fp32_eval_ms": {
+   "n": 269,
+   "median": 4.899999991059303,
+   "p90": 6.299999997019768,
+   "max": 8.799999997019768
+  },
+  "fetched": {
+   "loader_and_page": [
+    {
+     "path": "/demo/",
+     "status": 200,
+     "bytes": 2465
+    },
+    {
+     "path": "/dist/dev.js",
+     "status": 200,
+     "bytes": 40974
+    }
+   ],
+   "worker": [
+    {
+     "path": "/dist/chess-lab-worker.js",
+     "status": 200,
+     "bytes": 117469
+    }
+   ],
+   "wasm": [
+    {
+     "path": "/dist/ort-wasm-simd-threaded.wasm",
+     "status": 200,
+     "bytes": 14239897
+    }
+   ],
+   "glue_mjs": [],
+   "model": [
+    {
+     "path": "/model/sup-v1-final.onnx",
+     "status": 200,
+     "bytes": 6014759
+    }
+   ]
+  },
+  "int8": {
+   "loaded": true,
+   "bytes": 1548347,
+   "top1_same_as_fp32": 244,
+   "positions": 269,
+   "eval_ms": {
+    "n": 269,
+    "median": 41.599999994039536,
+    "p90": 49.79999999701977,
+    "max": 63
+   }
+  },
+  "fp16w": {
+   "loaded": true,
+   "bytes": 3016025,
+   "top1_same_as_fp32": 269,
+   "positions": 269,
+   "eval_ms": {
+    "n": 269,
+    "median": 4.799999997019768,
+    "p90": 6.200000002980232,
+    "max": 23.799999997019768
+   }
+  }
+ }
+}

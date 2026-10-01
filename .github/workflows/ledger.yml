@@ -1,0 +1,33 @@
+name: ledger
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ledger-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ledger:
+    name: ledger check
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # ubuntu-latest ships Node.js; no package.json or npm install needed.
+      - name: Check ledger entries
+        run: node scripts/ledger.mjs check
+
+      # Guards the checker itself: it must fail on a missing directory and on
+      # an empty one. A copy without those guards reported "0 entries, 0
+      # problem(s)" and exited 0 while this job was a required check.
+      - name: Test the checker
+        run: node --test scripts/ledger.test.mjs

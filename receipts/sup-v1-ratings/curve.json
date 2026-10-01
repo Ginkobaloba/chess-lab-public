@@ -1,0 +1,3079 @@
+{
+ "label": "engine-ladder Elo (Stockfish 19 UCI_Elo 1320-anchored, time control A: Stockfish 19, 1 thread, 100k nodes/move for UCI_Elo/Skill rungs; fixed depth for depth rungs), 95% CI. Not a human rating. Values below 1320 are extrapolated through the ladder chain.",
+ "net_player": "ONNX checkpoint via onnxruntime CPU, arg-max of the legal-move policy (1 node, no search)",
+ "anchor": "sf-elo1320",
+ "anchor_elo": 1320.0,
+ "ladder_sources": [
+  "D:\\chess-lab-data\\arena\\ladder-v2"
+ ],
+ "stage1_games_per_checkpoint_per_rung": 20,
+ "rungs": [
+  "random",
+  "m1r50",
+  "material1",
+  "material2",
+  "sf1320m1",
+  "sf-elo1320",
+  "sf-elo1500",
+  "sf-elo1700",
+  "sf-d1",
+  "sf-d3"
+ ],
+ "stage2_games_per_pairing": 100,
+ "stage2_nearest_rungs": 3,
+ "rating_wall_s_this_invocation": 0.1,
+ "commit": {
+  "commit": "04b875186b976d743633adb5cf2997a1d8cf9469",
+  "dirty": false
+ },
+ "hardware": {
+  "cpu_model": "13th Gen Intel(R) Core(TM) i9-13900KF",
+  "physical_cores": 24,
+  "logical_cpus": 32,
+  "ram_gb": 63.8,
+  "gpus": [
+   "NVIDIA GeForce RTX 4090, 24564 MiB, 610.62"
+  ],
+  "os": "Windows 11 (10.0.26200)",
+  "python": "3.13.3",
+  "hostname_hash": "9e965bffd329"
+ },
+ "shared_process_games": 0,
+ "curve": [
+  {
+   "step": 0,
+   "samples": 0,
+   "elo": 531.0,
+   "ci95": [
+    496.0,
+    563.8
+   ],
+   "extrapolated_below_1320": true,
+   "val_top1": 2.6e-05,
+   "onnx_bytes": 6008752,
+   "games": 440
+  },
+  {
+   "step": 250,
+   "samples": 512000,
+   "elo": 564.6,
+   "ci95": [
+    529.8,
+    597.3
+   ],
+   "extrapolated_below_1320": true,
+   "val_top1": 0.193458,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 500,
+   "samples": 1024000,
+   "elo": 735.6,
+   "ci95": [
+    704.1,
+    763.4
+   ],
+   "extrapolated_below_1320": true,
+   "val_top1": 0.261424,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 1000,
+   "samples": 2048000,
+   "elo": 794.5,
+   "ci95": [
+    764.8,
+    823.0
+   ],
+   "extrapolated_below_1320": true,
+   "val_top1": 0.30566,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 2000,
+   "samples": 4096000,
+   "elo": 927.7,
+   "ci95": [
+    897.6,
+    959.2
+   ],
+   "extrapolated_below_1320": true,
+   "val_top1": 0.369614,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 4000,
+   "samples": 8192000,
+   "elo": 1027.2,
+   "ci95": [
+    994.2,
+    1059.1
+   ],
+   "extrapolated_below_1320": true,
+   "val_top1": 0.406862,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 8000,
+   "samples": 16384000,
+   "elo": 1223.7,
+   "ci95": [
+    1192.3,
+    1256.7
+   ],
+   "extrapolated_below_1320": true,
+   "val_top1": 0.443762,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 16000,
+   "samples": 32768000,
+   "elo": 1326.9,
+   "ci95": [
+    1295.1,
+    1359.6
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.471218,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 32000,
+   "samples": 65536000,
+   "elo": 1354.5,
+   "ci95": [
+    1318.9,
+    1386.8
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.491352,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 48000,
+   "samples": 98304000,
+   "elo": 1425.6,
+   "ci95": [
+    1390.8,
+    1458.5
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.50309,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 64000,
+   "samples": 131072000,
+   "elo": 1434.1,
+   "ci95": [
+    1400.3,
+    1467.0
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.509446,
+   "onnx_bytes": 6014759,
+   "games": 440
+  },
+  {
+   "step": 80000,
+   "samples": 163840000,
+   "elo": 1444.6,
+   "ci95": [
+    1411.5,
+    1478.5
+   ],
+   "extrapolated_below_1320": false,
+   "val_top1": 0.512256,
+   "onnx_bytes": 6014759,
+   "games": 440
+  }
+ ],
+ "rungs_fit": {
+  "random": {
+   "elo": 470.2,
+   "ci95": [
+    441.9,
+    498.2
+   ]
+  },
+  "m1r50": {
+   "elo": 688.0,
+   "ci95": [
+    663.2,
+    711.1
+   ]
+  },
+  "material1": {
+   "elo": 797.6,
+   "ci95": [
+    774.7,
+    818.9
+   ]
+  },
+  "sf1320m1": {
+   "elo": 913.3,
+   "ci95": [
+    891.4,
+    935.4
+   ]
+  },
+  "material2": {
+   "elo": 1113.2,
+   "ci95": [
+    1093.1,
+    1129.0
+   ]
+  },
+  "sf-elo1320": {
+   "elo": 1320.0,
+   "ci95": [
+    1320.0,
+    1320.0
+   ]
+  },
+  "sf-elo1500": {
+   "elo": 1468.5,
+   "ci95": [
+    1448.7,
+    1490.0
+   ]
+  },
+  "sf-d1": {
+   "elo": 1521.2,
+   "ci95": [
+    1501.0,
+    1540.0
+   ]
+  },
+  "sf-elo1700": {
+   "elo": 1594.6,
+   "ci95": [
+    1570.9,
+    1618.8
+   ]
+  },
+  "sf-d3": {
+   "elo": 1808.8,
+   "ci95": [
+    1782.8,
+    1839.1
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "pair": "random~m1r50",
+   "games": 200,
+   "w_d_l": [
+    0,
+    36,
+    164
+   ],
+   "score": 0.09,
+   "score_ci95": [
+    0.0577,
+    0.1378
+   ],
+   "predicted": 0.2221,
+   "miss_pts": 8.43,
+   "saturated": false
+  },
+  {
+   "pair": "random~material1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    25,
+    175
+   ],
+   "score": 0.0625,
+   "score_ci95": [
+    0.0365,
+    0.105
+   ],
+   "predicted": 0.1319,
+   "miss_pts": 2.69,
+   "saturated": false
+  },
+  {
+   "pair": "random~material2",
+   "games": 200,
+   "w_d_l": [
+    0,
+    5,
+    195
+   ],
+   "score": 0.0125,
+   "score_ci95": [
+    0.0039,
+    0.0395
+   ],
+   "predicted": 0.0241,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf1320m1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0724,
+   "miss_pts": 4.46,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0075,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    0,
+    0,
+    200
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.0188
+   ],
+   "predicted": 0.0032,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0015,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "random~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    9,
+    191
+   ],
+   "score": 0.0225,
+   "score_ci95": [
+    0.0092,
+    0.0538
+   ],
+   "predicted": 0.0024,
+   "miss_pts": 0.69,
+   "saturated": false
+  },
+  {
+   "pair": "random~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0005,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~material1",
+   "games": 200,
+   "w_d_l": [
+    3,
+    105,
+    92
+   ],
+   "score": 0.2775,
+   "score_ci95": [
+    0.2201,
+    0.3433
+   ],
+   "predicted": 0.3473,
+   "miss_pts": 0.4,
+   "saturated": false
+  },
+  {
+   "pair": "m1r50~material2",
+   "games": 200,
+   "w_d_l": [
+    0,
+    4,
+    196
+   ],
+   "score": 0.01,
+   "score_ci95": [
+    0.0027,
+    0.0357
+   ],
+   "predicted": 0.0796,
+   "miss_pts": 4.39,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~sf1320m1",
+   "games": 200,
+   "w_d_l": [
+    2,
+    27,
+    171
+   ],
+   "score": 0.0775,
+   "score_ci95": [
+    0.0479,
+    0.123
+   ],
+   "predicted": 0.2146,
+   "miss_pts": 9.16,
+   "saturated": false
+  },
+  {
+   "pair": "m1r50~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0256,
+   "miss_pts": 0.21,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    0,
+    0,
+    200
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.0188
+   ],
+   "predicted": 0.0111,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0054,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "m1r50~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    17,
+    183
+   ],
+   "score": 0.0425,
+   "score_ci95": [
+    0.0221,
+    0.0801
+   ],
+   "predicted": 0.0082,
+   "miss_pts": 1.39,
+   "saturated": false
+  },
+  {
+   "pair": "m1r50~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0016,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "material1~material2",
+   "games": 200,
+   "w_d_l": [
+    0,
+    4,
+    196
+   ],
+   "score": 0.01,
+   "score_ci95": [
+    0.0027,
+    0.0357
+   ],
+   "predicted": 0.1398,
+   "miss_pts": 10.41,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf1320m1",
+   "games": 200,
+   "w_d_l": [
+    16,
+    84,
+    100
+   ],
+   "score": 0.29,
+   "score_ci95": [
+    0.2315,
+    0.3564
+   ],
+   "predicted": 0.3393,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "material1~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    0,
+    4,
+    196
+   ],
+   "score": 0.01,
+   "score_ci95": [
+    0.0027,
+    0.0357
+   ],
+   "predicted": 0.0471,
+   "miss_pts": 1.14,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    0,
+    1,
+    199
+   ],
+   "score": 0.0025,
+   "score_ci95": [
+    0.0003,
+    0.0235
+   ],
+   "predicted": 0.0206,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    0,
+    0,
+    200
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.0188
+   ],
+   "predicted": 0.0101,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "material1~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    23,
+    177
+   ],
+   "score": 0.0575,
+   "score_ci95": [
+    0.0328,
+    0.0989
+   ],
+   "predicted": 0.0153,
+   "miss_pts": 1.75,
+   "saturated": false
+  },
+  {
+   "pair": "material1~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    8,
+    192
+   ],
+   "score": 0.02,
+   "score_ci95": [
+    0.0078,
+    0.0503
+   ],
+   "predicted": 0.003,
+   "miss_pts": 0.48,
+   "saturated": true
+  },
+  {
+   "pair": "material2~sf1320m1",
+   "games": 200,
+   "w_d_l": [
+    178,
+    15,
+    7
+   ],
+   "score": 0.9275,
+   "score_ci95": [
+    0.8829,
+    0.9559
+   ],
+   "predicted": 0.7596,
+   "miss_pts": 12.33,
+   "saturated": false
+  },
+  {
+   "pair": "material2~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    5,
+    7,
+    188
+   ],
+   "score": 0.0425,
+   "score_ci95": [
+    0.0221,
+    0.0801
+   ],
+   "predicted": 0.2332,
+   "miss_pts": 15.31,
+   "saturated": false
+  },
+  {
+   "pair": "material2~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    1,
+    3,
+    196
+   ],
+   "score": 0.0125,
+   "score_ci95": [
+    0.0039,
+    0.0395
+   ],
+   "predicted": 0.1146,
+   "miss_pts": 7.51,
+   "saturated": true
+  },
+  {
+   "pair": "material2~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    1,
+    1,
+    198
+   ],
+   "score": 0.0075,
+   "score_ci95": [
+    0.0017,
+    0.0318
+   ],
+   "predicted": 0.0589,
+   "miss_pts": 2.71,
+   "saturated": true
+  },
+  {
+   "pair": "material2~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    2,
+    36,
+    162
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0657,
+    0.1494
+   ],
+   "predicted": 0.0872,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "material2~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    3,
+    197
+   ],
+   "score": 0.0075,
+   "score_ci95": [
+    0.0017,
+    0.0318
+   ],
+   "predicted": 0.0179,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "sf1320m1~sf-elo1320",
+   "games": 200,
+   "w_d_l": [
+    4,
+    4,
+    192
+   ],
+   "score": 0.03,
+   "score_ci95": [
+    0.0138,
+    0.0639
+   ],
+   "predicted": 0.0878,
+   "miss_pts": 2.39,
+   "saturated": false
+  },
+  {
+   "pair": "sf1320m1~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    0,
+    3,
+    197
+   ],
+   "score": 0.0075,
+   "score_ci95": [
+    0.0017,
+    0.0318
+   ],
+   "predicted": 0.0393,
+   "miss_pts": 0.75,
+   "saturated": true
+  },
+  {
+   "pair": "sf1320m1~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    0,
+    2,
+    198
+   ],
+   "score": 0.005,
+   "score_ci95": [
+    0.0009,
+    0.0278
+   ],
+   "predicted": 0.0194,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "sf1320m1~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    0,
+    39,
+    161
+   ],
+   "score": 0.0975,
+   "score_ci95": [
+    0.0637,
+    0.1465
+   ],
+   "predicted": 0.0293,
+   "miss_pts": 3.43,
+   "saturated": false
+  },
+  {
+   "pair": "sf1320m1~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    0,
+    5,
+    195
+   ],
+   "score": 0.0125,
+   "score_ci95": [
+    0.0039,
+    0.0395
+   ],
+   "predicted": 0.0057,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "sf-elo1320~sf-elo1500",
+   "games": 200,
+   "w_d_l": [
+    50,
+    10,
+    140
+   ],
+   "score": 0.275,
+   "score_ci95": [
+    0.2178,
+    0.3407
+   ],
+   "predicted": 0.2985,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1320~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    16,
+    6,
+    178
+   ],
+   "score": 0.095,
+   "score_ci95": [
+    0.0617,
+    0.1436
+   ],
+   "predicted": 0.1707,
+   "miss_pts": 2.71,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1320~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    14,
+    42,
+    144
+   ],
+   "score": 0.175,
+   "score_ci95": [
+    0.1286,
+    0.2336
+   ],
+   "predicted": 0.2389,
+   "miss_pts": 0.53,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1320~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    1,
+    3,
+    196
+   ],
+   "score": 0.0125,
+   "score_ci95": [
+    0.0039,
+    0.0395
+   ],
+   "predicted": 0.0566,
+   "miss_pts": 1.71,
+   "saturated": true
+  },
+  {
+   "pair": "sf-elo1500~sf-elo1700",
+   "games": 200,
+   "w_d_l": [
+    48,
+    19,
+    133
+   ],
+   "score": 0.2875,
+   "score_ci95": [
+    0.2292,
+    0.3538
+   ],
+   "predicted": 0.326,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1500~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    32,
+    68,
+    100
+   ],
+   "score": 0.33,
+   "score_ci95": [
+    0.2686,
+    0.3978
+   ],
+   "predicted": 0.4246,
+   "miss_pts": 2.68,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1500~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    6,
+    14,
+    180
+   ],
+   "score": 0.065,
+   "score_ci95": [
+    0.0384,
+    0.108
+   ],
+   "predicted": 0.1236,
+   "miss_pts": 1.56,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1700~sf-d1",
+   "games": 200,
+   "w_d_l": [
+    68,
+    75,
+    57
+   ],
+   "score": 0.5275,
+   "score_ci95": [
+    0.4584,
+    0.5955
+   ],
+   "predicted": 0.604,
+   "miss_pts": 0.85,
+   "saturated": false
+  },
+  {
+   "pair": "sf-elo1700~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    21,
+    32,
+    147
+   ],
+   "score": 0.185,
+   "score_ci95": [
+    0.1373,
+    0.2446
+   ],
+   "predicted": 0.2257,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "sf-d1~sf-d3",
+   "games": 200,
+   "w_d_l": [
+    5,
+    56,
+    139
+   ],
+   "score": 0.165,
+   "score_ci95": [
+    0.12,
+    0.2227
+   ],
+   "predicted": 0.1604,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~random",
+   "games": 100,
+   "w_d_l": [
+    1,
+    95,
+    4
+   ],
+   "score": 0.485,
+   "score_ci95": [
+    0.3894,
+    0.5817
+   ],
+   "predicted": 0.5865,
+   "miss_pts": 0.48,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~m1r50",
+   "games": 100,
+   "w_d_l": [
+    1,
+    52,
+    47
+   ],
+   "score": 0.27,
+   "score_ci95": [
+    0.1927,
+    0.3643
+   ],
+   "predicted": 0.2882,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~material1",
+   "games": 100,
+   "w_d_l": [
+    0,
+    39,
+    61
+   ],
+   "score": 0.195,
+   "score_ci95": [
+    0.1292,
+    0.2833
+   ],
+   "predicted": 0.1773,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~material2",
+   "games": 20,
+   "w_d_l": [
+    0,
+    5,
+    15
+   ],
+   "score": 0.125,
+   "score_ci95": [
+    0.0396,
+    0.3313
+   ],
+   "predicted": 0.0338,
+   "miss_pts": 0.57,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~sf1320m1",
+   "games": 20,
+   "w_d_l": [
+    0,
+    2,
+    18
+   ],
+   "score": 0.05,
+   "score_ci95": [
+    0.0089,
+    0.2361
+   ],
+   "predicted": 0.0996,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~sf-elo1320",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0105,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0045,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    0,
+    0,
+    20
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.1611
+   ],
+   "predicted": 0.0022,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@0~sf-d1",
+   "games": 20,
+   "w_d_l": [
+    0,
+    9,
+    11
+   ],
+   "score": 0.225,
+   "score_ci95": [
+    0.0959,
+    0.4427
+   ],
+   "predicted": 0.0033,
+   "miss_pts": 9.26,
+   "saturated": false
+  },
+  {
+   "pair": "net@0~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0006,
+   "miss_pts": 0.2,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~random",
+   "games": 100,
+   "w_d_l": [
+    5,
+    95,
+    0
+   ],
+   "score": 0.525,
+   "score_ci95": [
+    0.428,
+    0.6201
+   ],
+   "predicted": 0.6326,
+   "miss_pts": 1.25,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~m1r50",
+   "games": 100,
+   "w_d_l": [
+    1,
+    53,
+    46
+   ],
+   "score": 0.275,
+   "score_ci95": [
+    0.197,
+    0.3696
+   ],
+   "predicted": 0.3296,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~material1",
+   "games": 100,
+   "w_d_l": [
+    1,
+    49,
+    50
+   ],
+   "score": 0.255,
+   "score_ci95": [
+    0.1797,
+    0.3484
+   ],
+   "predicted": 0.2073,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~material2",
+   "games": 20,
+   "w_d_l": [
+    0,
+    6,
+    14
+   ],
+   "score": 0.15,
+   "score_ci95": [
+    0.0524,
+    0.3604
+   ],
+   "predicted": 0.0408,
+   "miss_pts": 1.16,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~sf1320m1",
+   "games": 20,
+   "w_d_l": [
+    0,
+    4,
+    16
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0279,
+    0.301
+   ],
+   "predicted": 0.1184,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~sf-elo1320",
+   "games": 20,
+   "w_d_l": [
+    0,
+    2,
+    18
+   ],
+   "score": 0.05,
+   "score_ci95": [
+    0.0089,
+    0.2361
+   ],
+   "predicted": 0.0128,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    0,
+    0,
+    20
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.1611
+   ],
+   "predicted": 0.0055,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@250~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0027,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~sf-d1",
+   "games": 20,
+   "w_d_l": [
+    0,
+    8,
+    12
+   ],
+   "score": 0.2,
+   "score_ci95": [
+    0.0807,
+    0.416
+   ],
+   "predicted": 0.004,
+   "miss_pts": 7.66,
+   "saturated": false
+  },
+  {
+   "pair": "net@250~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    2,
+    18
+   ],
+   "score": 0.05,
+   "score_ci95": [
+    0.0089,
+    0.2361
+   ],
+   "predicted": 0.0008,
+   "miss_pts": 0.81,
+   "saturated": false
+  },
+  {
+   "pair": "net@500~random",
+   "games": 20,
+   "w_d_l": [
+    4,
+    16,
+    0
+   ],
+   "score": 0.6,
+   "score_ci95": [
+    0.3866,
+    0.7812
+   ],
+   "predicted": 0.8217,
+   "miss_pts": 4.05,
+   "saturated": false
+  },
+  {
+   "pair": "net@500~m1r50",
+   "games": 100,
+   "w_d_l": [
+    10,
+    80,
+    10
+   ],
+   "score": 0.5,
+   "score_ci95": [
+    0.4038,
+    0.5962
+   ],
+   "predicted": 0.5681,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@500~material1",
+   "games": 100,
+   "w_d_l": [
+    5,
+    75,
+    20
+   ],
+   "score": 0.425,
+   "score_ci95": [
+    0.3327,
+    0.5229
+   ],
+   "predicted": 0.4117,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@500~material2",
+   "games": 20,
+   "w_d_l": [
+    0,
+    6,
+    14
+   ],
+   "score": 0.15,
+   "score_ci95": [
+    0.0524,
+    0.3604
+   ],
+   "predicted": 0.1021,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@500~sf1320m1",
+   "games": 100,
+   "w_d_l": [
+    5,
+    50,
+    45
+   ],
+   "score": 0.3,
+   "score_ci95": [
+    0.2189,
+    0.3958
+   ],
+   "predicted": 0.2644,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@500~sf-elo1320",
+   "games": 20,
+   "w_d_l": [
+    0,
+    0,
+    20
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.1611
+   ],
+   "predicted": 0.0334,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@500~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0145,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@500~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    0,
+    0,
+    20
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.1611
+   ],
+   "predicted": 0.0071,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@500~sf-d1",
+   "games": 20,
+   "w_d_l": [
+    0,
+    4,
+    16
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0279,
+    0.301
+   ],
+   "predicted": 0.0107,
+   "miss_pts": 1.71,
+   "saturated": false
+  },
+  {
+   "pair": "net@500~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    3,
+    17
+   ],
+   "score": 0.075,
+   "score_ci95": [
+    0.0175,
+    0.2694
+   ],
+   "predicted": 0.0021,
+   "miss_pts": 1.54,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~random",
+   "games": 20,
+   "w_d_l": [
+    7,
+    13,
+    0
+   ],
+   "score": 0.675,
+   "score_ci95": [
+    0.4567,
+    0.8369
+   ],
+   "predicted": 0.8661,
+   "miss_pts": 2.92,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~m1r50",
+   "games": 100,
+   "w_d_l": [
+    24,
+    71,
+    5
+   ],
+   "score": 0.595,
+   "score_ci95": [
+    0.497,
+    0.686
+   ],
+   "predicted": 0.6487,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~material1",
+   "games": 100,
+   "w_d_l": [
+    8,
+    77,
+    15
+   ],
+   "score": 0.465,
+   "score_ci95": [
+    0.3704,
+    0.5622
+   ],
+   "predicted": 0.4956,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~material2",
+   "games": 20,
+   "w_d_l": [
+    0,
+    6,
+    14
+   ],
+   "score": 0.15,
+   "score_ci95": [
+    0.0524,
+    0.3604
+   ],
+   "predicted": 0.1377,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~sf1320m1",
+   "games": 100,
+   "w_d_l": [
+    9,
+    65,
+    26
+   ],
+   "score": 0.415,
+   "score_ci95": [
+    0.3233,
+    0.513
+   ],
+   "predicted": 0.3354,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~sf-elo1320",
+   "games": 20,
+   "w_d_l": [
+    0,
+    0,
+    20
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.1611
+   ],
+   "predicted": 0.0463,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@1000~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0202,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0099,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~sf-d1",
+   "games": 20,
+   "w_d_l": [
+    0,
+    4,
+    16
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0279,
+    0.301
+   ],
+   "predicted": 0.015,
+   "miss_pts": 1.28,
+   "saturated": false
+  },
+  {
+   "pair": "net@1000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0029,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~random",
+   "games": 20,
+   "w_d_l": [
+    4,
+    16,
+    0
+   ],
+   "score": 0.6,
+   "score_ci95": [
+    0.3866,
+    0.7812
+   ],
+   "predicted": 0.933,
+   "miss_pts": 15.18,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~m1r50",
+   "games": 20,
+   "w_d_l": [
+    7,
+    13,
+    0
+   ],
+   "score": 0.675,
+   "score_ci95": [
+    0.4567,
+    0.8369
+   ],
+   "predicted": 0.799,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~material1",
+   "games": 100,
+   "w_d_l": [
+    31,
+    68,
+    1
+   ],
+   "score": 0.65,
+   "score_ci95": [
+    0.5525,
+    0.7364
+   ],
+   "predicted": 0.679,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~material2",
+   "games": 100,
+   "w_d_l": [
+    3,
+    48,
+    49
+   ],
+   "score": 0.27,
+   "score_ci95": [
+    0.1927,
+    0.3643
+   ],
+   "predicted": 0.2558,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~sf1320m1",
+   "games": 100,
+   "w_d_l": [
+    19,
+    74,
+    7
+   ],
+   "score": 0.56,
+   "score_ci95": [
+    0.4623,
+    0.6533
+   ],
+   "predicted": 0.5207,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~sf-elo1320",
+   "games": 20,
+   "w_d_l": [
+    1,
+    2,
+    17
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0279,
+    0.301
+   ],
+   "predicted": 0.0947,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0426,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    0,
+    5,
+    15
+   ],
+   "score": 0.125,
+   "score_ci95": [
+    0.0396,
+    0.3313
+   ],
+   "predicted": 0.0211,
+   "miss_pts": 1.85,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~sf-d1",
+   "games": 20,
+   "w_d_l": [
+    0,
+    7,
+    13
+   ],
+   "score": 0.175,
+   "score_ci95": [
+    0.0661,
+    0.3886
+   ],
+   "predicted": 0.0318,
+   "miss_pts": 3.43,
+   "saturated": false
+  },
+  {
+   "pair": "net@2000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    1,
+    19
+   ],
+   "score": 0.025,
+   "score_ci95": [
+    0.0026,
+    0.2005
+   ],
+   "predicted": 0.0062,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~random",
+   "games": 20,
+   "w_d_l": [
+    10,
+    10,
+    0
+   ],
+   "score": 0.75,
+   "score_ci95": [
+    0.5313,
+    0.8881
+   ],
+   "predicted": 0.9611,
+   "miss_pts": 7.29,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~m1r50",
+   "games": 20,
+   "w_d_l": [
+    13,
+    7,
+    0
+   ],
+   "score": 0.825,
+   "score_ci95": [
+    0.6114,
+    0.9339
+   ],
+   "predicted": 0.8757,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~material1",
+   "games": 100,
+   "w_d_l": [
+    49,
+    50,
+    1
+   ],
+   "score": 0.74,
+   "score_ci95": [
+    0.6463,
+    0.816
+   ],
+   "predicted": 0.7894,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~material2",
+   "games": 100,
+   "w_d_l": [
+    18,
+    48,
+    34
+   ],
+   "score": 0.42,
+   "score_ci95": [
+    0.328,
+    0.5179
+   ],
+   "predicted": 0.3786,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~sf1320m1",
+   "games": 100,
+   "w_d_l": [
+    38,
+    55,
+    7
+   ],
+   "score": 0.655,
+   "score_ci95": [
+    0.5577,
+    0.7409
+   ],
+   "predicted": 0.6582,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~sf-elo1320",
+   "games": 20,
+   "w_d_l": [
+    1,
+    5,
+    14
+   ],
+   "score": 0.175,
+   "score_ci95": [
+    0.0661,
+    0.3886
+   ],
+   "predicted": 0.1564,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    0,
+    2,
+    18
+   ],
+   "score": 0.05,
+   "score_ci95": [
+    0.0089,
+    0.2361
+   ],
+   "predicted": 0.0731,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    0,
+    0,
+    20
+   ],
+   "score": 0.0,
+   "score_ci95": [
+    0.0,
+    0.1611
+   ],
+   "predicted": 0.0367,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@4000~sf-d1",
+   "games": 20,
+   "w_d_l": [
+    0,
+    8,
+    12
+   ],
+   "score": 0.2,
+   "score_ci95": [
+    0.0807,
+    0.416
+   ],
+   "predicted": 0.055,
+   "miss_pts": 2.57,
+   "saturated": false
+  },
+  {
+   "pair": "net@4000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    7,
+    13
+   ],
+   "score": 0.175,
+   "score_ci95": [
+    0.0661,
+    0.3886
+   ],
+   "predicted": 0.011,
+   "miss_pts": 5.51,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~random",
+   "games": 20,
+   "w_d_l": [
+    16,
+    4,
+    0
+   ],
+   "score": 0.9,
+   "score_ci95": [
+    0.699,
+    0.9721
+   ],
+   "predicted": 0.9871,
+   "miss_pts": 1.5,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~m1r50",
+   "games": 20,
+   "w_d_l": [
+    17,
+    3,
+    0
+   ],
+   "score": 0.925,
+   "score_ci95": [
+    0.7306,
+    0.9825
+   ],
+   "predicted": 0.9562,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~material1",
+   "games": 20,
+   "w_d_l": [
+    14,
+    6,
+    0
+   ],
+   "score": 0.85,
+   "score_ci95": [
+    0.6396,
+    0.9476
+   ],
+   "predicted": 0.9208,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~material2",
+   "games": 100,
+   "w_d_l": [
+    33,
+    52,
+    15
+   ],
+   "score": 0.59,
+   "score_ci95": [
+    0.492,
+    0.6813
+   ],
+   "predicted": 0.6538,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~sf1320m1",
+   "games": 20,
+   "w_d_l": [
+    14,
+    6,
+    0
+   ],
+   "score": 0.85,
+   "score_ci95": [
+    0.6396,
+    0.9476
+   ],
+   "predicted": 0.8565,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    22,
+    32,
+    46
+   ],
+   "score": 0.38,
+   "score_ci95": [
+    0.291,
+    0.4779
+   ],
+   "predicted": 0.3649,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    0,
+    5,
+    15
+   ],
+   "score": 0.125,
+   "score_ci95": [
+    0.0396,
+    0.3313
+   ],
+   "predicted": 0.1964,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    2,
+    5,
+    13
+   ],
+   "score": 0.225,
+   "score_ci95": [
+    0.0959,
+    0.4427
+   ],
+   "predicted": 0.1057,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~sf-d1",
+   "games": 100,
+   "w_d_l": [
+    3,
+    39,
+    58
+   ],
+   "score": 0.225,
+   "score_ci95": [
+    0.1542,
+    0.3161
+   ],
+   "predicted": 0.1528,
+   "miss_pts": 0.14,
+   "saturated": false
+  },
+  {
+   "pair": "net@8000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    3,
+    17
+   ],
+   "score": 0.075,
+   "score_ci95": [
+    0.0175,
+    0.2694
+   ],
+   "predicted": 0.0333,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~random",
+   "games": 20,
+   "w_d_l": [
+    18,
+    2,
+    0
+   ],
+   "score": 0.95,
+   "score_ci95": [
+    0.7639,
+    0.9911
+   ],
+   "predicted": 0.9928,
+   "miss_pts": 0.17,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~m1r50",
+   "games": 20,
+   "w_d_l": [
+    19,
+    1,
+    0
+   ],
+   "score": 0.975,
+   "score_ci95": [
+    0.7995,
+    0.9974
+   ],
+   "predicted": 0.9753,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~material1",
+   "games": 20,
+   "w_d_l": [
+    18,
+    2,
+    0
+   ],
+   "score": 0.95,
+   "score_ci95": [
+    0.7639,
+    0.9911
+   ],
+   "predicted": 0.9546,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~material2",
+   "games": 100,
+   "w_d_l": [
+    61,
+    33,
+    6
+   ],
+   "score": 0.775,
+   "score_ci95": [
+    0.6839,
+    0.8458
+   ],
+   "predicted": 0.7738,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf1320m1",
+   "games": 20,
+   "w_d_l": [
+    18,
+    2,
+    0
+   ],
+   "score": 0.95,
+   "score_ci95": [
+    0.7639,
+    0.9911
+   ],
+   "predicted": 0.9153,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    41,
+    21,
+    38
+   ],
+   "score": 0.515,
+   "score_ci95": [
+    0.4183,
+    0.6106
+   ],
+   "predicted": 0.5099,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf-elo1500",
+   "games": 20,
+   "w_d_l": [
+    5,
+    5,
+    10
+   ],
+   "score": 0.375,
+   "score_ci95": [
+    0.1998,
+    0.5905
+   ],
+   "predicted": 0.3068,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    2,
+    0,
+    18
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0279,
+    0.301
+   ],
+   "predicted": 0.1764,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf-d1",
+   "games": 100,
+   "w_d_l": [
+    2,
+    44,
+    54
+   ],
+   "score": 0.24,
+   "score_ci95": [
+    0.1669,
+    0.3323
+   ],
+   "predicted": 0.2462,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@16000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    5,
+    15
+   ],
+   "score": 0.125,
+   "score_ci95": [
+    0.0396,
+    0.3313
+   ],
+   "predicted": 0.0587,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~random",
+   "games": 20,
+   "w_d_l": [
+    19,
+    1,
+    0
+   ],
+   "score": 0.975,
+   "score_ci95": [
+    0.7995,
+    0.9974
+   ],
+   "predicted": 0.9939,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~m1r50",
+   "games": 20,
+   "w_d_l": [
+    20,
+    0,
+    0
+   ],
+   "score": 1.0,
+   "score_ci95": [
+    0.8389,
+    1.0
+   ],
+   "predicted": 0.9789,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@32000~material1",
+   "games": 20,
+   "w_d_l": [
+    18,
+    2,
+    0
+   ],
+   "score": 0.95,
+   "score_ci95": [
+    0.7639,
+    0.9911
+   ],
+   "predicted": 0.9611,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~material2",
+   "games": 20,
+   "w_d_l": [
+    14,
+    4,
+    2
+   ],
+   "score": 0.8,
+   "score_ci95": [
+    0.584,
+    0.9193
+   ],
+   "predicted": 0.8004,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf1320m1",
+   "games": 20,
+   "w_d_l": [
+    17,
+    3,
+    0
+   ],
+   "score": 0.925,
+   "score_ci95": [
+    0.7306,
+    0.9825
+   ],
+   "predicted": 0.9269,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    46,
+    19,
+    35
+   ],
+   "score": 0.555,
+   "score_ci95": [
+    0.4574,
+    0.6486
+   ],
+   "predicted": 0.5495,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf-elo1500",
+   "games": 100,
+   "w_d_l": [
+    19,
+    24,
+    57
+   ],
+   "score": 0.31,
+   "score_ci95": [
+    0.2278,
+    0.4063
+   ],
+   "predicted": 0.3416,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    3,
+    6,
+    11
+   ],
+   "score": 0.3,
+   "score_ci95": [
+    0.1455,
+    0.519
+   ],
+   "predicted": 0.2007,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf-d1",
+   "games": 100,
+   "w_d_l": [
+    6,
+    43,
+    51
+   ],
+   "score": 0.275,
+   "score_ci95": [
+    0.197,
+    0.3696
+   ],
+   "predicted": 0.2769,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@32000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    7,
+    13
+   ],
+   "score": 0.175,
+   "score_ci95": [
+    0.0661,
+    0.3886
+   ],
+   "predicted": 0.0682,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~random",
+   "games": 20,
+   "w_d_l": [
+    19,
+    1,
+    0
+   ],
+   "score": 0.975,
+   "score_ci95": [
+    0.7995,
+    0.9974
+   ],
+   "predicted": 0.9959,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~m1r50",
+   "games": 20,
+   "w_d_l": [
+    20,
+    0,
+    0
+   ],
+   "score": 1.0,
+   "score_ci95": [
+    0.8389,
+    1.0
+   ],
+   "predicted": 0.9859,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@48000~material1",
+   "games": 20,
+   "w_d_l": [
+    20,
+    0,
+    0
+   ],
+   "score": 1.0,
+   "score_ci95": [
+    0.8389,
+    1.0
+   ],
+   "predicted": 0.9738,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@48000~material2",
+   "games": 20,
+   "w_d_l": [
+    18,
+    2,
+    0
+   ],
+   "score": 0.95,
+   "score_ci95": [
+    0.7639,
+    0.9911
+   ],
+   "predicted": 0.8579,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf1320m1",
+   "games": 20,
+   "w_d_l": [
+    19,
+    1,
+    0
+   ],
+   "score": 0.975,
+   "score_ci95": [
+    0.7995,
+    0.9974
+   ],
+   "predicted": 0.9502,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    64,
+    11,
+    25
+   ],
+   "score": 0.695,
+   "score_ci95": [
+    0.5989,
+    0.7766
+   ],
+   "predicted": 0.6474,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf-elo1500",
+   "games": 100,
+   "w_d_l": [
+    28,
+    24,
+    48
+   ],
+   "score": 0.4,
+   "score_ci95": [
+    0.3094,
+    0.498
+   ],
+   "predicted": 0.4386,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    6,
+    3,
+    11
+   ],
+   "score": 0.375,
+   "score_ci95": [
+    0.1998,
+    0.5905
+   ],
+   "predicted": 0.2743,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf-d1",
+   "games": 100,
+   "w_d_l": [
+    10,
+    44,
+    46
+   ],
+   "score": 0.32,
+   "score_ci95": [
+    0.2367,
+    0.4166
+   ],
+   "predicted": 0.3657,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@48000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    5,
+    15
+   ],
+   "score": 0.125,
+   "score_ci95": [
+    0.0396,
+    0.3313
+   ],
+   "predicted": 0.0992,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~random",
+   "games": 20,
+   "w_d_l": [
+    20,
+    0,
+    0
+   ],
+   "score": 1.0,
+   "score_ci95": [
+    0.8389,
+    1.0
+   ],
+   "predicted": 0.9961,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@64000~m1r50",
+   "games": 20,
+   "w_d_l": [
+    20,
+    0,
+    0
+   ],
+   "score": 1.0,
+   "score_ci95": [
+    0.8389,
+    1.0
+   ],
+   "predicted": 0.9865,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@64000~material1",
+   "games": 20,
+   "w_d_l": [
+    18,
+    2,
+    0
+   ],
+   "score": 0.95,
+   "score_ci95": [
+    0.7639,
+    0.9911
+   ],
+   "predicted": 0.975,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~material2",
+   "games": 20,
+   "w_d_l": [
+    15,
+    5,
+    0
+   ],
+   "score": 0.875,
+   "score_ci95": [
+    0.6687,
+    0.9604
+   ],
+   "predicted": 0.8637,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf1320m1",
+   "games": 20,
+   "w_d_l": [
+    18,
+    2,
+    0
+   ],
+   "score": 0.95,
+   "score_ci95": [
+    0.7639,
+    0.9911
+   ],
+   "predicted": 0.9525,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    62,
+    19,
+    19
+   ],
+   "score": 0.715,
+   "score_ci95": [
+    0.6199,
+    0.7942
+   ],
+   "predicted": 0.6585,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf-elo1500",
+   "games": 100,
+   "w_d_l": [
+    37,
+    21,
+    42
+   ],
+   "score": 0.475,
+   "score_ci95": [
+    0.3799,
+    0.572
+   ],
+   "predicted": 0.4506,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    2,
+    5,
+    13
+   ],
+   "score": 0.225,
+   "score_ci95": [
+    0.0959,
+    0.4427
+   ],
+   "predicted": 0.2841,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf-d1",
+   "games": 100,
+   "w_d_l": [
+    7,
+    45,
+    48
+   ],
+   "score": 0.295,
+   "score_ci95": [
+    0.2145,
+    0.3906
+   ],
+   "predicted": 0.3771,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@64000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    1,
+    8,
+    11
+   ],
+   "score": 0.25,
+   "score_ci95": [
+    0.1119,
+    0.4687
+   ],
+   "predicted": 0.1037,
+   "miss_pts": 0.82,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~random",
+   "games": 20,
+   "w_d_l": [
+    19,
+    1,
+    0
+   ],
+   "score": 0.975,
+   "score_ci95": [
+    0.7995,
+    0.9974
+   ],
+   "predicted": 0.9963,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~m1r50",
+   "games": 20,
+   "w_d_l": [
+    20,
+    0,
+    0
+   ],
+   "score": 1.0,
+   "score_ci95": [
+    0.8389,
+    1.0
+   ],
+   "predicted": 0.9873,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@80000~material1",
+   "games": 20,
+   "w_d_l": [
+    20,
+    0,
+    0
+   ],
+   "score": 1.0,
+   "score_ci95": [
+    0.8389,
+    1.0
+   ],
+   "predicted": 0.9764,
+   "miss_pts": 0.0,
+   "saturated": true
+  },
+  {
+   "pair": "net@80000~material2",
+   "games": 20,
+   "w_d_l": [
+    18,
+    1,
+    1
+   ],
+   "score": 0.925,
+   "score_ci95": [
+    0.7306,
+    0.9825
+   ],
+   "predicted": 0.8708,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf1320m1",
+   "games": 20,
+   "w_d_l": [
+    18,
+    2,
+    0
+   ],
+   "score": 0.95,
+   "score_ci95": [
+    0.7639,
+    0.9911
+   ],
+   "predicted": 0.9551,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf-elo1320",
+   "games": 100,
+   "w_d_l": [
+    63,
+    18,
+    19
+   ],
+   "score": 0.72,
+   "score_ci95": [
+    0.6251,
+    0.7986
+   ],
+   "predicted": 0.6721,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf-elo1500",
+   "games": 100,
+   "w_d_l": [
+    36,
+    19,
+    45
+   ],
+   "score": 0.455,
+   "score_ci95": [
+    0.3609,
+    0.5525
+   ],
+   "predicted": 0.4658,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf-elo1700",
+   "games": 20,
+   "w_d_l": [
+    5,
+    6,
+    9
+   ],
+   "score": 0.4,
+   "score_ci95": [
+    0.2188,
+    0.6134
+   ],
+   "predicted": 0.2967,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf-d1",
+   "games": 100,
+   "w_d_l": [
+    16,
+    36,
+    48
+   ],
+   "score": 0.34,
+   "score_ci95": [
+    0.2546,
+    0.4372
+   ],
+   "predicted": 0.3915,
+   "miss_pts": 0.0,
+   "saturated": false
+  },
+  {
+   "pair": "net@80000~sf-d3",
+   "games": 20,
+   "w_d_l": [
+    0,
+    4,
+    16
+   ],
+   "score": 0.1,
+   "score_ci95": [
+    0.0279,
+    0.301
+   ],
+   "predicted": 0.1095,
+   "miss_pts": 0.0,
+   "saturated": false
+  }
+ ]
+}

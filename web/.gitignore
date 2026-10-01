@@ -1,0 +1,7 @@
+node_modules/
+dist/
+release/
+*.tgz
+test-results/
+# Model files are served from D:\chess-lab-data\export at /model/ by scripts/serve.mjs
+# and are never copied here.
