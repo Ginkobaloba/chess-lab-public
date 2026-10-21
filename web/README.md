@@ -172,9 +172,9 @@ information.
 
 - The public page, its copy, and whether and how a rating appears on it
   (not decided yet).
-- The repo is GPL-3.0 (`LICENSE`). The browser bundle itself has no
-  third-party GPL code: chess.js is BSD-2-Clause, onnxruntime-web MIT
-  (docs/LICENSES.md).
+- `web/` is MIT (`web/LICENSE`); the rest of the repo is GPL-3.0
+  (`LICENSE`). The browser bundle has no third-party GPL code: chess.js is
+  BSD-2-Clause, onnxruntime-web MIT (docs/LICENSES.md).
 - ONNX Runtime's `ThirdPartyNotices.txt` for the native code in the wasm file
   must ship with any public release (VERIFY at the v1.30.0 tag).
 - Download size: about 9.3 MB gzip before the first move (above). The

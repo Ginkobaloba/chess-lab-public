@@ -40,8 +40,14 @@ Hashes and versions:
 2. **python-chess** is GPL-3.0-or-later. The Python tooling here imports it,
    so under a strict reading a *distributed* copy of that tooling is a
    combined work that must be GPL-3 compatible. The repo is therefore
-   licensed GPL-3.0 as a whole. The copied draughts-lab code is MIT, which is
-   compatible with GPL-3.0.
+   licensed GPL-3.0, except `web/` (below). The copied draughts-lab code is
+   MIT, which is compatible with GPL-3.0.
+   **`web/` is MIT** (`web/LICENSE`; Drew's decision, 2026-10-21). It imports
+   nothing from outside `web/`, and its shipped and dev dependency trees hold
+   no GPL, LGPL or AGPL package (checked from `web/package-lock.json`
+   2026-10-21). Drew is the only contributor, so the relicense needs no one
+   else's consent. **The model weights are CC BY 4.0** (same decision); they
+   are not in this repo, and any release that ships them carries that notice.
 3. **The browser build** (`web/`, prep only, nothing public) ships the ONNX
    weights, onnxruntime-web 1.30.0 (MIT) and chess.js 1.4.0 (BSD-2-Clause),
    checked from the installed packages (table above). esbuild's metafile
