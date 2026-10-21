@@ -68,6 +68,7 @@ exact games. The recorded games are the receipt.
 
 ## License
 
-GPL-3.0 (see `LICENSE`). Third-party components and their licenses are
-listed in `docs/LICENSES.md`. Stockfish and the Lichess data are not in this
-repo.
+GPL-3.0 (see `LICENSE`), except `web/`, the browser build, which is MIT (see
+`web/LICENSE`). The trained model weights, when published, are licensed
+CC BY 4.0. Third-party components and their licenses are listed in
+`docs/LICENSES.md`. Stockfish and the Lichess data are not in this repo.

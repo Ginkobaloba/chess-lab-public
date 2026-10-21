@@ -2,7 +2,7 @@
   "name": "@chess-lab/web",
   "version": "0.1.0",
   "description": "Browser build prep for chess-lab: the policy net in onnxruntime-web inside a Web Worker, a chess.js move generator and an encoder that matches chesslab/encode.py, plus a local dev page.",
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "engines": {
